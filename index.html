@@ -10,8 +10,22 @@
             --slide-ratio: calc(16 / 9);
         }
 
-        .shower h2 {
+        .shower h1 {
+            margin: 30px 0 0;
             color: #cc0000;
+            text-align: center;
+            font-size: 70px;
+        }
+
+        .shower h2 {
+            color: #326267;
+            margin: 30px 0 0;
+            text-align: left;
+            font-size: 70px;
+        }
+
+        .shower p {
+            color: #9A3924;
         }
 
         /* .cover {
@@ -43,34 +57,17 @@
       </figure>
       <p class="place bottom">Cécilia Bossard et Jean Paliès</p>
       <style>
-          #picture h2 {
-              color: white;
-          }
-          #cover h1 {
-              margin: 30px 0 0;
-              color: #cc0000;
-              text-align: center;
-              font-size: 70px;
-          }
-
-          #cover h2 {
-              margin: 30px 0 0;
-              color: white;
-              text-align: center;
-              font-size: 70px;
-          }
-
           #cover p {
               margin: 10px 0 0;
               text-align: center;
-              color: grey;
               font-style: italic;
               font-size: 20px;
           }
 
-          #cover p a {
-              color: white;
+          #cover h2 {
+              text-align: center;
           }
+
       </style>
     </section>
 
@@ -93,17 +90,9 @@
     <section class="slide" id="survey">
       <figure>
           <img class="cover width" src="pictures/ask-blackboard-356079.jpg">
-
       </figure>
-        <h2 class="shout">Petit sondage</h2>
+      <h1>Petit sondage</h1>
 
-        <style>
-        #survey h2 {
-            margin: 30px 0 0;
-            text-align: center;
-            font-size: 70px;
-        }
-        </style>
     </section>
 
     <section class="slide" id="constat">
@@ -114,39 +103,37 @@
           </figcaption>
       </figure>
 
-        <h2>Constat : rejet de l'agilité</h2>
+      <h1>Constat : rejet de l'agilité</h1>
 
-        <p class="place bottom next">Pourquoi ?</p>
+      <p class="place bottom next">Pourquoi ?</p>
 
-        <style>
-        #constat  h2 {
-            margin: 30px 0 0;
-            text-align: left;
-            font-size: 70px;
-        }
+      <style>
 
-        #constat p {
-            color: white;
-            text-align: center;
-            font-size: 70px;
-        }
-        </style>
+      #constat p {
+          text-align: center;
+          font-size: 70px;
+      }
+      </style>
     </section>
 
     <section class="slide" id="why">
-        <h2>Constat</h2>
-        <ul>
-          <li>L'agilité, c'est notre quotidien. Ce n'est plus un sujet de discussion</li>
-          <li>L'agilité, c'est du bullshit marketing</li>
-          <li>L'agilité, c'est plein de process, de réunions, ... on n'a plus le temps de bosser</li>
-          <li>L'agilité, c'est une volonté de la direction</li>
-        </ul>
-        <figure>
-            <img class="cover" src="pictures/ken-treloar-346065-unsplash.jpg">
-            <figcaption class="copyright right white">
-                <a href="https://unsplash.com/photos/yjePAp-tpmQ">Photo by Ken Treloar on Unsplash</a>
-            </figcaption>
-        </figure>
+      <h2>Constat</h2>
+        <div class="columns two">
+          <span>
+            <ul>
+              <li>L'agilité, c'est notre quotidien. Ce n'est plus un sujet de discussion</li>
+              <li>L'agilité, c'est du bullshit marketing</li>
+              <li>L'agilité, c'est plein de process, de réunions, ... on n'a plus le temps de bosser</li>
+              <li>L'agilité, c'est une volonté de la direction</li>
+            </ul>
+          </span>
+          <figure>
+              <img class="cover" src="pictures/ken-treloar-346065-unsplash.jpg">
+              <figcaption class="copyright right white">
+                  <a href="https://unsplash.com/photos/yjePAp-tpmQ">Photo by Ken Treloar on Unsplash</a>
+              </figcaption>
+          </figure>
+        </div>
 
         <style>
           #why .cover {
@@ -183,11 +170,7 @@
                 <a href="http://programming-motherfucker.com/">© Zed A. Shaw</a>
             </figcaption>
         </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
+
     </section>
 
     <section class="slide" id="picture">
@@ -197,29 +180,16 @@
                 <a href="http://programming-motherfucker.com/">© Zed A. Shaw</a>
             </figcaption>
         </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
     </section>
 
     <section class="slide" id="perversion">
-
-
-
-        <figure>
+      <figure>
             <img class="cover width" src="pictures/scott-webb-274694-unsplash.jpg">
             <figcaption class="copyright right white">
                 <a href="https://unsplash.com/photos/yekGLpc3vro">Photo by Scott Webb on Unsplash</a>
             </figcaption>
         </figure>
-        <h2 class="shout">Perversion de l'agilité</h2>
-        <style>
-            #perversion h2 {
-                color: white;
-            }
-        </style>
+        <h1 class="shout">Perversion de l'agilité</h1>
 
     </section>
 
@@ -276,7 +246,7 @@
     <section class="slide">
         <h2>Perversion de l'agilité</h2>
         <p>L'agilité est entrée dans les moeurs</p>
-        <p class="note next">Mais comme toutes les choses qui deviennent populaires, elles perdent peu à peu leur essence</p>
+        <p>Mais comme toutes les choses qui deviennent populaires, elles perdent peu à peu leur essence</p>
         <figure>
             <img class="cover width" src="pictures/joshua-hoehne-1054014-unsplash.jpg">
             <figcaption class="copyright right white">
@@ -303,7 +273,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout">Un outil imposé</h2>
+        <h1 class="shout">Un outil imposé</h1>
         <figure>
             <img class="cover width" src="pictures/active-angry-army-279991.jpg">
         </figure>
@@ -319,13 +289,6 @@
               <a href="https://unsplash.com/photos/_3Q3tsJ01nc">Photo by freestocks.org on Unsplash</a>
           </figcaption>
       </figure>
-
-      <style>
-          #clientWill p {
-              color: white;
-          }
-      </style>
-
 
     </section>
 
@@ -350,18 +313,13 @@
         <figure>
             <img class="cover" src="pictures/transfoAgile.jpeg" alt="Transformation agile">
         </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
         <footer class="footer">
           OK, donc Vous faites des daily scrums qui se rapprochent plus du reporting envers le management, vous surveillez le burn-down comme seule preuve de l'avancement du projet, vous faites des itérations, vous avez un scrum master certifié, ancien chef de projet, qui protège l'équipe en leur épargnant les tâches douloureuses d'auto-organisation en assignant les tâches, avec un PO qui en fait est un ancien chef de projet fonctionnel, donc qui n'a jamais pratiqué le métier du client, qui n'utilisera jamais de sa vie le produit développé et qui en fait est juste un passe plats entre le client et l'équipe de développement...  Je pense que ce n'est pas tout à fait l'esprit ...
         </footer>
     </section>
 
     <section class="slide" id="indicators">
-        <h2 class="shout">Une gestion par les indicateurs</h2>
+        <h1 class="shout">Une gestion par les indicateurs</h1>
 
         <figure>
             <img class="cover width" src="pictures/michal-mrozek-1238458-unsplash.jpg">
@@ -369,14 +327,6 @@
                 <a href="https://unsplash.com/photos/0aqJNZ5tVBc">Photo by Michal Mrozek on Unsplash</a>
             </figcaption>
         </figure>
-
-        <style>
-            #indicators h2 {
-                color: #cc0000;
-            }
-        </style>
-
-
     </section>
 
     <section class="slide" id="charts">
@@ -391,11 +341,6 @@
       <figure>
           <img class="cover width" src="pictures/bright-business-chart-210607.jpg">
       </figure>
-      <style>
-          #charts p {
-              color:white;
-          }
-      </style>
 
     </section>
 
@@ -413,23 +358,16 @@
               <a href="https://unsplash.com/photos/jBxLJt-fEvs">Photo by rawpixel on Unsplash</a>
           </figcaption>
       </figure>
-
-
-
-
     </section>
 
     <section class="slide">
-      <h2 class="shout">Un monde de Bisounours ?</h2>
+      <h1 class="shout">Un monde de Bisounours ?</h1>
       <figure>
           <img class="cover width" src="pictures/bokeh-lights-plush-toy-869517.jpg">
           <figcaption class="copyright right white">
               <a href="https://www.pexels.com/photo/bokeh-photography-of-pink-bear-plush-toy-869517/">Photo by Akshar Dave from Pexels </a>
           </figcaption>
       </figure>
-
-
-
     </section>
 
     <section class="slide" id="ideal">
@@ -447,14 +385,6 @@
               <a href="https://unsplash.com/photos/mcLpPD36-2k">Photo by rawpixel on Unsplash</a>
           </figcaption>
       </figure>
-      <style>
-          #ideal p {
-              color:white;
-          }
-      </style>
-
-
-
     </section>
 
     <section class="slide" id="retro">
@@ -472,17 +402,6 @@
               <a href="https://unsplash.com/photos/fZ2hMpHIrbI">Photo by Sydney Sims on Unsplash</a>
           </figcaption>
       </figure>
-      <style>
-
-        #retro h3 {
-            color:white;
-        }
-          #retro p {
-              color:white;
-          }
-      </style>
-
-
     </section>
 
     <section class="slide">
@@ -522,7 +441,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="shout">Excellence technique</h2>
+      <h1 class="shout">Excellence technique</h1>
       <figure>
           <img class="cover width" src="pictures/clark-young-143623-unsplash.jpg">
           <figcaption class="copyright right white">
@@ -572,11 +491,6 @@
                 <a href="https://www.tutorialspoint.com/extreme_programming/extreme_programming_supporting_practices.htm">© www.tutorialspoint.com</a>
             </figcaption>
         </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
         <footer class="footer">
           La base de l'agilité repose sur une bonne conception, un code évolutif et simple. Les auteurs du manifeste n'ont peut-être pas assez insisté sur ce point ou ça leur paraissait tellement évident qu'ils ne l'ont pas rendu suffisamment explicite.
   Les pratiques de l'extreme programming sont toutes conditionnées entre elles.  => https://www.tutorialspoint.com/extreme_programming/extreme_programming_supporting_practices.htm
@@ -586,7 +500,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="shout">Non universalité</h2>
+      <h1 class="shout">Non universalité</h1>
       <figure>
           <img class="cover width" src="pictures/markus-spiske-773758-unsplash.jpg">
           <figcaption class="copyright right black">
@@ -645,7 +559,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="shout">Inventez votre propre méthode !</h2>
+      <h1>Inventez votre propre méthode !</h1>
       <footer class="footer">
 Mais j'ai une bonne nouvelle ! Votre équipe n'est peut-être pas agile, mais si son mode de fonctionnement lui convient,
 si elle résout les problèmes qui la concernent et s'améliore au fil du temps, c'est une équipe avec laquelle il fait bon travailler !
@@ -662,7 +576,7 @@ si elle résout les problèmes qui la concernent et s'améliore au fil du temps,
     </section>
 
     <section class="slide">
-      <h2 class="shout">Soyez pragmatiques, pas dogmatiques !</h2>
+      <h1 >Soyez pragmatiques, pas dogmatiques !</h1>
       <footer class="footer">
         Vous avez le droit de picorer les bonnes pratiques qui vous sont utiles dans votre contexte. Mais ayez conscience que vous être en phase de transformation et d'amélioration continue.
         L'agilité n'est pas un but à atteindre, mais juste une façon de marcher dans la direction dans laquelle l'équipe souhaite aller.
@@ -679,7 +593,7 @@ si elle résout les problèmes qui la concernent et s'améliore au fil du temps,
     </section>
 
     <section class="slide">
-      <h2 class="shout">Industrie vs. artisanat</h2>
+      <h1>Industrie vs. artisanat</h1>
       <footer class="footer">
       Vous êtes responsables de vos outils et de vos méthodes de travail. L'agilité, c'est dans l'équipe de développement qu'elle née, pas suite à des décisions de managers et de directeurs.
 Vous allez devoir maintenir demain le code que vous produisez aujourd'hui. Alors pourquoi vous mettre des bâtons dans les roues tous seuls ? Pourquoi ne pas mettre la priorité sur la qualité, le partage des connaissances au sein de l'équipe, la facilité de relecture du code, la compréhension du métier, ... ?
@@ -690,7 +604,7 @@ Si vous êtes ici, c'est que vous avez à coeur de vous améliorer, d'apprendre 
 </section>
 
 <section class="slide">
-  <h2 class="shout">Agile != A.G.I.L.E</h2>
+  <h1>Agile != A.G.I.L.E</h1>
   <footer class="footer">
     Vous pouvez tout à fait être agiles dans votre travail quotidien, sans pour autant être estampillé A.G.I.L.E. par la hiérarchie.
     L'agilité, c'est un état d'esprit, des valeurs, une envie de travail bien fait et utile à l'utilisateur final.
