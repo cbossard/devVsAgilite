@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Développeurs et agilité</title>
+    <title>Développeurs vs. agilité</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <style>
         .shower {
             --slide-ratio: calc(16 / 9);
@@ -12,45 +13,34 @@
 
         .shower h1 {
             margin: 30px 0 0;
-            color: #cc0000;
+            color: #FF4C4C;
             text-align: center;
             font-size: 70px;
         }
 
         .shower h2 {
-            color: #326267;
+            color: #cc0000;
             margin: 30px 0 0;
             text-align: left;
             font-size: 70px;
         }
 
         .shower p {
-            color: #9A3924;
+            color: black;
         }
 
-        /* .cover {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          z-index: -1;
-          transform: translate(-50%, -50%);
-          max-width: 100%;
-          max-height:none;
-        } */
+        .shower li {
+            color: black;
+        }
+
     </style>
 </head>
 <body class="shower list">
-
-    <header class="caption">
-        <h1>Agilité et développeurs</h1>
-        <p>La guerre est déclarée ?</p>
-    </header>
-
     <section class="slide" id="cover">
-      <h1>Agilité et développeurs</h1>
-      <h2>La guerre est déclarée ?</h2>
+      <h2 >Agilité et développeurs</h2>
+      <h1 class="shout">La guerre est déclarée ?</h1>
       <figure>
-          <img class="cover width" src="pictures/kelly-sikkema-530092-unsplash.jpg">
+          <img class="cover width" src="pictures/b&w/kelly-sikkema-530092-unsplash.jpg">
           <figcaption class="copyright right white">
               <a href="https://unsplash.com/photos/E8H76nY1v6Q">Photo by Kelly Sikkema on Unsplash</a>
           </figcaption>
@@ -62,6 +52,7 @@
               text-align: center;
               font-style: italic;
               font-size: 20px;
+              color: grey;
           }
 
           #cover h2 {
@@ -71,33 +62,54 @@
       </style>
     </section>
 
-    <section class="slide">
-        <div class="columns two">
-          <div>
-            <h2>Cécilia Bossard</h2>
-            <p>Développeuse, agiliste, boîte à outils, ...</p>
-            <p><img src="pictures/cl-logo-2017-transparent.png"></p>
-            <p><img src="pictures/twitter.png">@ceciliaBossard</p>
-          </div>
-          <div>
+    <section class="slide" id="us">
+      <table>
+        <tr>
+          <td style="width:30%">  <img src="pictures/b&w/cecilia.jpeg" style="border-radius: 50%; width: 75%;"></td>
+          <td>
+              <h2>Cécilia Bossard</h2>
+              <p>Développeuse, agiliste, boîte à outils, ...</p>
+              <div class="columns two">
+                <p><img src="pictures/twitter.png">@ceciliaBossard</p>
+                <p><img src="pictures/b&w/cl-logo-big-2017.svg" style="width: 35%;"></p>
+              </div>
+          </td>
+        </tr>
+        <tr>
+          <td>  <img src="pictures/b&w/jean.jpeg" style="border-radius: 50%; width: 75%;"></td>
+          <td>
             <h2>Jean Paliès</h2>
             <p>Développeur freelance</p>
             <p><img src="pictures/twitter.png">@jpalies</p>
-          </div>
-        </div>
+          </td>
+        </tr>
+      </table>
+
+      <style>
+
+      #us h2 {
+        font-size: 40px;
+      }
+
+      #us tr:not(:last-of-type) > * {
+        background: none;
+      }
+
+      </style>
+
     </section>
 
     <section class="slide" id="survey">
       <figure>
           <img class="cover width" src="pictures/ask-blackboard-356079.jpg">
       </figure>
-      <h1>Petit sondage</h1>
+      <h1 class="shout">Petit sondage</h1>
 
     </section>
 
     <section class="slide" id="constat">
       <figure>
-          <img class="cover width" src="pictures/jose-aragones-627837-unsplash.jpg">
+          <img class="cover width" src="pictures/b&w/jose-aragones-627837-unsplash.jpg">
           <figcaption class="copyright right white">
               <a href="https://unsplash.com/photos/81QkOoPGahY">Photo by Jose Aragones on Unsplash</a>
           </figcaption>
@@ -128,7 +140,7 @@
             </ul>
           </span>
           <figure>
-              <img class="cover" src="pictures/ken-treloar-346065-unsplash.jpg">
+              <img class="cover" src="pictures/b&w/ken-treloar-346065-unsplash.jpg">
               <figcaption class="copyright right white">
                   <a href="https://unsplash.com/photos/yjePAp-tpmQ">Photo by Ken Treloar on Unsplash</a>
               </figcaption>
@@ -138,24 +150,37 @@
         <style>
           #why .cover {
               left: 82%;
+              z-index: auto;
           }
 
+          #why li {
+            font-size: 23px;
+          }
+          /* #why li:before {
+            font-family:FontAwesome;
+            position: absolute;
+            left: 0;
+            color:#318ca0;
+            font-size:32px;
+            content:"f138";
+          } */
         </style>
 
     </section>
 
     <section class="slide" id="trauma">
         <h2>Constat</h2>
-        <p>L'agilité est vécue comme un traumatisme</p>
-        <p>par un certain nombre de développeurs...</p>
+        <p>L'agilité est vécue comme un traumatisme
+        <br/>par un certain nombre de développeurs...</p>
         <figure>
-            <img class="cover" src="pictures/anthony-tran-679123-unsplash.jpg">
+            <img class="cover" src="pictures/b&w/anthony-tran-679123-unsplash.jpg">
             <figcaption class="copyright right white">
                 <a href="https://unsplash.com/photos/i-ePv9Dxg7U">Photo by Anthony Tran on Unsplash</a>
             </figcaption>
         </figure>
         <style>
           #trauma .cover {
+              z-index: auto;
               left: 82%;
           }
 
@@ -184,7 +209,7 @@
 
     <section class="slide" id="perversion">
       <figure>
-            <img class="cover width" src="pictures/scott-webb-274694-unsplash.jpg">
+            <img class="cover width" src="pictures/b&w/scott-webb-274694-unsplash.jpg">
             <figcaption class="copyright right white">
                 <a href="https://unsplash.com/photos/yekGLpc3vro">Photo by Scott Webb on Unsplash</a>
             </figcaption>
@@ -215,7 +240,7 @@
         </ul>
 
         <figure>
-            <img class="cover" src="pictures/erol-ahmed-460283-unsplash.jpg">
+            <img class="cover" src="pictures/b&w/erol-ahmed-460283-unsplash.jpg">
             <figcaption class="copyright right white">
                 <a href="https://unsplash.com/photos/N23rmTcf0NA">Photo by Erol Ahmed on Unsplash</a>
             </figcaption>
@@ -223,6 +248,7 @@
         <style>
           #history .cover {
               left: 82%;
+              z-index: auto;
           }
         </style>
     </section>
@@ -236,28 +262,40 @@
           <li>Monétisation de l'agilité</li>
         </ul>
         <figure>
-            <img class="cover" src="pictures/erol-ahmed-460283-unsplash.jpg">
+            <img class="cover" src="pictures/b&w/erol-ahmed-460283-unsplash.jpg">
             <figcaption class="copyright right white">
                 <a href="https://unsplash.com/photos/N23rmTcf0NA">Photo by Erol Ahmed on Unsplash</a>
             </figcaption>
         </figure>
     </section>
 
-    <section class="slide">
+    <section class="slide" id="apple">
         <h2>Perversion de l'agilité</h2>
-        <p>L'agilité est entrée dans les moeurs</p>
-        <p>Mais comme toutes les choses qui deviennent populaires, elles perdent peu à peu leur essence</p>
+        <div>
+          <p>L'agilité est entrée dans les moeurs</p>
+          <p>Mais comme toutes les choses qui deviennent populaires, elles perdent peu à peu leur essence</p>
+        </div>
         <figure>
-            <img class="cover width" src="pictures/joshua-hoehne-1054014-unsplash.jpg">
+            <img class="cover width" src="pictures/b&w/joshua-hoehne-1054014-unsplash.jpg">
             <figcaption class="copyright right white">
                 <a href="https://unsplash.com/photos/FFn2-TW8pxk">Photo by Joshua Hoehne on Unsplash</a>
             </figcaption>
         </figure>
+        <style>
+          /* #apple div {
+            opacity: 0.7;
+            background-color: white;
+          }
+
+          #apple p {
+            opacity: 1;
+          } */
+        </style>
     </section>
 
     <section class="slide">
       <figure>
-          <img class="cover width" src="pictures/AgileManifesto.png">
+          <img class="cover width" src="pictures/b&w/AgileManifesto.png">
       </figure>
     </section>
 
@@ -284,7 +322,7 @@
       <h2>Un outil imposé</h2>
       <p>C'est ce que demandent les clients désormais</p>
       <figure>
-          <img class="cover width" src="pictures/freestocks-org-187367-unsplash.jpg">
+          <img class="cover width" src="pictures/b&w/freestocks-org-187367-unsplash.jpg">
           <figcaption class="copyright right white">
               <a href="https://unsplash.com/photos/_3Q3tsJ01nc">Photo by freestocks.org on Unsplash</a>
           </figcaption>
@@ -305,13 +343,13 @@
       </ul>
 
       <figure>
-          <img class="cover width" src="pictures/postits.jpg">
+          <img class="cover width" src="pictures/b&w/postits.jpg">
       </figure>
     </section>
 
     <section class="slide" id="picture">
         <figure>
-            <img class="cover" src="pictures/transfoAgile.jpeg" alt="Transformation agile">
+            <img class="cover" src="pictures/b&w/transfoAgile.jpeg" alt="Transformation agile">
         </figure>
         <footer class="footer">
           OK, donc Vous faites des daily scrums qui se rapprochent plus du reporting envers le management, vous surveillez le burn-down comme seule preuve de l'avancement du projet, vous faites des itérations, vous avez un scrum master certifié, ancien chef de projet, qui protège l'équipe en leur épargnant les tâches douloureuses d'auto-organisation en assignant les tâches, avec un PO qui en fait est un ancien chef de projet fonctionnel, donc qui n'a jamais pratiqué le métier du client, qui n'utilisera jamais de sa vie le produit développé et qui en fait est juste un passe plats entre le client et l'équipe de développement...  Je pense que ce n'est pas tout à fait l'esprit ...
@@ -322,10 +360,12 @@
         <h1 class="shout">Une gestion par les indicateurs</h1>
 
         <figure>
-            <img class="cover width" src="pictures/michal-mrozek-1238458-unsplash.jpg">
+            <img class="cover width" src="pictures/audio-dj-mix-63703.jpg">
             <figcaption class="copyright right white">
-                <a href="https://unsplash.com/photos/0aqJNZ5tVBc">Photo by Michal Mrozek on Unsplash</a>
+                <a href="https://www.pexels.com/photo/table-music-power-sound-63703/"> Photo by Stephen Niemeier from Pexels </a>
             </figcaption>
+
+
         </figure>
     </section>
 
@@ -339,7 +379,13 @@
       </p>
 
       <figure>
-          <img class="cover width" src="pictures/bright-business-chart-210607.jpg">
+          <img class="cover width" src="pictures/b&w/mika-baumeister-703680-unsplash.jpg">
+          <figcaption class="copyright right white">
+              <a href="https://unsplash.com/photos/Wpnoqo2plFA">Photo by Mika Baumeister on Unsplash</a>
+          </figcaption>
+
+
+
       </figure>
 
     </section>
@@ -353,9 +399,9 @@
         <li>...</li>
       </ul>
       <figure>
-          <img class="cover width" src="pictures/rawpixel-790897-unsplash.jpg">
+          <img class="cover width" src="pictures/b&w/irfan-simsar-1144378-unsplash.jpg">
           <figcaption class="copyright right white">
-              <a href="https://unsplash.com/photos/jBxLJt-fEvs">Photo by rawpixel on Unsplash</a>
+              <a href="https://unsplash.com/photos/wxWulfjN-G0">Photo by İrfan Simsar on Unsplash</a>
           </figcaption>
       </figure>
     </section>
@@ -363,7 +409,7 @@
     <section class="slide">
       <h1 class="shout">Un monde de Bisounours ?</h1>
       <figure>
-          <img class="cover width" src="pictures/bokeh-lights-plush-toy-869517.jpg">
+          <img class="cover width" src="pictures/b&w/bokeh-lights-plush-toy-869517.jpg">
           <figcaption class="copyright right white">
               <a href="https://www.pexels.com/photo/bokeh-photography-of-pink-bear-plush-toy-869517/">Photo by Akshar Dave from Pexels </a>
           </figcaption>
@@ -380,7 +426,7 @@
       </p>
 
       <figure>
-          <img class="cover width" src="pictures/rawpixel-653764-unsplash.jpg">
+          <img class="cover width" src="pictures/b&w/rawpixel-653764-unsplash.jpg">
           <figcaption class="copyright right white">
               <a href="https://unsplash.com/photos/mcLpPD36-2k">Photo by rawpixel on Unsplash</a>
           </figcaption>
@@ -397,7 +443,7 @@
         Actions jamais réalisées.
       </p>
       <figure>
-          <img class="cover width" src="pictures/sydney-sims-519706-unsplash.jpg">
+          <img class="cover width" src="pictures/b&w/sydney-sims-519706-unsplash.jpg">
           <figcaption class="copyright right white">
               <a href="https://unsplash.com/photos/fZ2hMpHIrbI">Photo by Sydney Sims on Unsplash</a>
           </figcaption>
@@ -415,7 +461,7 @@
         Lead, don't tell : montrer par l'exemple, pas de comportement prescriptif
       </footer>
       <figure>
-          <img class="cover width" src="pictures/smart-304883-unsplash.jpg">
+          <img class="cover width" src="pictures/b&w/smart-304883-unsplash.jpg">
           <figcaption class="copyright right white">
               <a href="https://unsplash.com/photos/IM0GHpsjJic">Photo by Smart on Unsplash</a>
           </figcaption>
@@ -427,10 +473,10 @@
 
     <section class="slide">
       <h2>Un monde de Bisounours ?</h2>
-      <h3>Energizers ... WTF ?</h3>
-      <p>Quelque chose à ajouter ?</p>
+      <h3>Energizers ...</h3>
+      <p> WTF ?</p>
       <figure>
-          <img class="cover width" src="pictures/braydon-anderson-105552-unsplash.jpg">
+          <img class="cover width" src="pictures/b&w/braydon-anderson-105552-unsplash.jpg">
           <figcaption class="copyright right white">
               <a href="https://unsplash.com/photos/wOHH-NUTvVc">Photo by Braydon Anderson on Unsplash</a>
           </figcaption>
@@ -443,7 +489,7 @@
     <section class="slide">
       <h1 class="shout">Excellence technique</h1>
       <figure>
-          <img class="cover width" src="pictures/clark-young-143623-unsplash.jpg">
+          <img class="cover width" src="pictures/b&w/clark-young-143623-unsplash.jpg">
           <figcaption class="copyright right white">
               <a href="https://unsplash.com/photos/tq7RtEvezSY">Photo by Clark Young on Unsplash</a>
           </figcaption>
@@ -476,7 +522,7 @@
           Par contre, le rythme soutenable, c'est bien joli votre idée de bisounours, mais on a un business à faire tourner quand même ! "
         </footer>
         <figure>
-            <img class="cover width" src="pictures/david-siglin-87978-unsplash.jpg">
+            <img class="cover width" src="pictures/b&w/david-siglin-87978-unsplash.jpg">
             <figcaption class="copyright right white">
                 <a href="https://unsplash.com/photos/UuW4psOb388">Photo by David Siglin on Unsplash</a>
             </figcaption>
@@ -484,7 +530,7 @@
     </section>
 
     <section class="slide" id="picture">
-        <h2>Extreme Programming</h2>
+
         <figure>
             <img class="cover" src="pictures/PratiquesXP.jpg" alt="Pratiques XP">
             <figcaption class="copyright right black">
@@ -502,7 +548,7 @@
     <section class="slide">
       <h1 class="shout">Non universalité</h1>
       <figure>
-          <img class="cover width" src="pictures/markus-spiske-773758-unsplash.jpg">
+          <img class="cover width" src="pictures/b&w/markus-spiske-773758-unsplash.jpg">
           <figcaption class="copyright right black">
               <a href="https://unsplash.com/photos/QVVXPNbjLrI">Photo by Markus Spiske on Unsplash</a>
           </figcaption>
@@ -517,7 +563,7 @@
         <p>Transparence et communication</p>
 
         <figure>
-            <img class="cover width" src="pictures/startae-team-704141-unsplash.jpg">
+            <img class="cover width" src="pictures/b&w/startae-team-704141-unsplash.jpg">
             <figcaption class="copyright right black">
                 <a href="https://unsplash.com/photos/7tXA8xwe4W4">Photo by Startaê Team on Unsplash</a>
             </figcaption>
@@ -548,7 +594,7 @@
           Cette course permanente pour vider le backlog peut être épuisante à terme.
         </footer>
         <figure>
-            <img class="cover width" src="pictures/diz-play-31367-unsplash.jpg">
+            <img class="cover width" src="pictures/b&w/diz-play-31367-unsplash.jpg">
             <figcaption class="copyright right black">
                 <a href="https://unsplash.com/photos/PIrOQrqewLE">Photo by Diz Play on Unsplash</a>
             </figcaption>
@@ -559,13 +605,13 @@
     </section>
 
     <section class="slide">
-      <h1>Inventez votre propre méthode !</h1>
+      <h2>Inventez votre propre méthode !</h2>
       <footer class="footer">
 Mais j'ai une bonne nouvelle ! Votre équipe n'est peut-être pas agile, mais si son mode de fonctionnement lui convient,
 si elle résout les problèmes qui la concernent et s'améliore au fil du temps, c'est une équipe avec laquelle il fait bon travailler !
       </footer>
       <figure>
-          <img class="cover width" src="pictures/jon-flobrant-2844-unsplash.jpg">
+          <img class="cover width" src="pictures/b&w/jon-flobrant-2844-unsplash.jpg">
           <figcaption class="copyright right black">
               <a href="https://unsplash.com/photos/8u9Uiz_JjnM">Photo by Jon Flobrant on Unsplash</a>
           </figcaption>
@@ -576,7 +622,7 @@ si elle résout les problèmes qui la concernent et s'améliore au fil du temps,
     </section>
 
     <section class="slide">
-      <h1 >Soyez pragmatiques, pas dogmatiques !</h1>
+      <h2>Soyez pragmatiques, pas dogmatiques !</h2>
       <footer class="footer">
         Vous avez le droit de picorer les bonnes pratiques qui vous sont utiles dans votre contexte. Mais ayez conscience que vous être en phase de transformation et d'amélioration continue.
         L'agilité n'est pas un but à atteindre, mais juste une façon de marcher dans la direction dans laquelle l'équipe souhaite aller.
@@ -590,10 +636,19 @@ si elle résout les problèmes qui la concernent et s'améliore au fil du temps,
         Pourquoi est ce qu'on n'accepte pas ce genre de comportement dans nos métiers ? Pourquoi le binômage est-il tant décrié par les managers ? Pourquoi est ce que les développeurs expérimentés sont considérés comme des personnes qui n'ont pas réussi à évoluer en chef de projet, des éternels ados ? Pourquoi une telle infantilisation ?
 
       </footer>
+
+      <figure>
+          <img class="cover width" src="pictures/b&w/diana-vargas-715578-unsplash.jpg">
+          <figcaption class="copyright right black">
+              <a href="https://unsplash.com/photos/ZySVEbGBNxA">Photo by Diana Vargas on Unsplash</a>
+          </figcaption>
+      </figure>
+
+
     </section>
 
     <section class="slide">
-      <h1>Industrie vs. artisanat</h1>
+      <h1 class="place bottom">Industrie vs. artisanat</h1>
       <footer class="footer">
       Vous êtes responsables de vos outils et de vos méthodes de travail. L'agilité, c'est dans l'équipe de développement qu'elle née, pas suite à des décisions de managers et de directeurs.
 Vous allez devoir maintenir demain le code que vous produisez aujourd'hui. Alors pourquoi vous mettre des bâtons dans les roues tous seuls ? Pourquoi ne pas mettre la priorité sur la qualité, le partage des connaissances au sein de l'équipe, la facilité de relecture du code, la compréhension du métier, ... ?
@@ -601,6 +656,14 @@ En acceptant de faire du code de mauvaise qualité, dans des conditions "agiles"
 Commencez petit, testez des choses, voyez si ça vous convient, itérez, progressez, ... N'ayez pas peur de tenter de nouvelles approches. Au pire, vous risquez d'apprendre quelque chose ;-)
 Si vous êtes ici, c'est que vous avez à coeur de vous améliorer, d'apprendre de nouvelles choses, ... Et si ces pratiques de développement vous font peur, vous pouvez également les tester dans un environnement "safe", au cours de coding dojo par exemple. <Moment pub>Et 'hésitez pas à venir discuter avec d'autres développeurs dans les meetups Software Crafters</Moment Pub>. L'agilité, ce n'est pas appliquer à la lettre toutes les pratiques et les cérémonies de tel ou tel framework. L'agilité s'appelle ainsi car son but est de s'adapter aux équipes, d'évoluer au fil du temps.
 </footer>
+<figure>
+    <img class="cover width" src="pictures/b&w/peter-miranda-22681-unsplash.jpg">
+    <figcaption class="copyright right black">
+        <a href="https://unsplash.com/photos/m6f-Anqil9k">Photo by Peter Miranda on Unsplash</a>
+    </figcaption>
+</figure>
+
+
 </section>
 
 <section class="slide">
@@ -613,7 +676,7 @@ Si vous êtes ici, c'est que vous avez à coeur de vous améliorer, d'apprendre 
 </footer>
 
 <figure>
-    <img class="cover width" src="pictures/rawpixel-552396-unsplash.jpg">
+    <img class="cover width" src="pictures/b&w/rawpixel-552396-unsplash.jpg">
     <figcaption class="copyright right black">
         <a href="https://unsplash.com/photos/UnPhQSAVbdk">Photo by rawpixel on Unsplash</a>
     </figcaption>
@@ -625,11 +688,11 @@ Si vous êtes ici, c'est que vous avez à coeur de vous améliorer, d'apprendre 
 </section>
 
 <section class="slide">
-  <h2 class="shout">Merci !</h2>
+  <h2>Merci !</h2>
 
 
   <figure>
-      <img class="cover width" src="pictures/art-card-close-up-920938.jpg">
+      <img class="cover width" src="pictures/b&w/art-card-close-up-920938.jpg">
       <figcaption class="copyright right black">
           <a href="https://www.pexels.com/photo/white-page-of-graphing-paper-with-red-heart-drawing-920938/">Photo by Bich Tran from Pexels</a>
       </figcaption>
@@ -637,7 +700,7 @@ Si vous êtes ici, c'est que vous avez à coeur de vous améliorer, d'apprendre 
 </section>
 
 <section class="slide">
-  <h2>Merci !</h2>
+  <h1>Merci !</h1>
   <h3>Et un grand merci à :</h3>
   <ul>
     <li>Tous les dev qui ont répondu à nos questions</li>
@@ -647,7 +710,7 @@ Si vous êtes ici, c'est que vous avez à coeur de vous améliorer, d'apprendre 
   </ul>
 
   <figure>
-    <img class="cover" src="pictures/eric-ward-342202-unsplash.jpg">
+    <img class="cover" src="pictures/b&w/eric-ward-342202-unsplash.jpg">
     <figcaption class="copyright right white">
         <a href="https://unsplash.com/photos/P6NhhvGIL9k">Photo by Eric Ward on Unsplash</a>
     </figcaption>
@@ -658,9 +721,9 @@ Si vous êtes ici, c'est que vous avez à coeur de vous améliorer, d'apprendre 
 </section>
 
 <section class="slide">
-  <h2 class="shout">Questions ?</h2>
+  <h1 class="shout">Questions ?</h1>
   <figure>
-      <img class="cover width" src="pictures/camylla-battani-784361-unsplash.jpg">
+      <img class="cover width" src="pictures/b&w/camylla-battani-784361-unsplash.jpg">
       <figcaption class="copyright right black">
           <a href="https://unsplash.com/photos/AoqgGAqrLpU">Photo by Camylla Battani on Unsplash</a>
       </figcaption>
