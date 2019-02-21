@@ -33,7 +33,7 @@ Première constatation, l'agilité a été pervertie au fil du temps.
 
 ### Perversion de l'Agilité
 Uncle Bob a très bien décrit ce phénomène dans un de ses articles d'août 2018.
-A l'origine, l'agilité a été créée par des programmeurs, a qui faire un travail de qualité tenait à coeur.
+A l'origine, l'agilité a été créée par des programmeurs, qui avaient à coeur de faire un travail de qualité.
 Et puis, peut-être par réaction d'auto-défense parce qu'ils sentaient que leur utilité était remise en question, les managers se sont emparés de l'agilité et en ont exclus les développeurs : c'est de la gestion de projets, non ?
 Typiquement, dans les conférences sur l'agilité, qui voyons-nous ? Il n'y a plus ni développeurs ni entrepreneurs. Seul reste le middle management qui semble chercher à justifier sa place en s'emparant de ces méthodes.
 
@@ -96,13 +96,14 @@ On observe des dérives assez malsaines :
 - par exemple, les développeurs ne vont prendre que les petites tâches pour montrer qu'ils avancent vite. Et les tâches complexes qui prennent du temps ne sont jamais faites.
 - certains scrum masters sont objectivés sur le burndown. Il faut donc à tout prix qu'il soit le plus rectiligne possible, quitte à tricher
 - on ne veut surtout pas de rouge dans les "mood boards". Tout va bien dans l'équipe et tout le monde est heureux.
+
 Ces indicateurs étaient supposés apporter de la transparence et permettre de lancer des alertes au plus tôt pour rectifier le tir. Ils ont été déviés de leur raison d'être pour servir d'indicateurs sur la performance des personnes et sont même utilisés comme moyen de mesurer l'atteinte des objectifs définis lors des entretiens annuels.
 
 ## Un outil imposé
 Avec tous ces nouveaux indicateurs, les managers trouvent que l'agilité, c'est vraiment quelque chose de bien, qu'il faut absolument mettre en place.
 
 ### client
-En plus, maintenant que les clients en ont entendu parler, c'est ce qu'ils veulent. Donc on est obligé de passer en mode agile.
+En plus, maintenant que les clients en ont entendu parler, c'est ce qu'ils veulent, c'est ce qui est à la mode. Donc on est obligé de passer en mode agile.
 
 ### outil imposé
 En plus, l'agilité, c'est vraiment chouette !
@@ -122,7 +123,7 @@ L'agilité a également tendance à être présentée comme une méthode de biso
 
 ### Idéalisation
 On constate une sorte d'idéalisation de l'image d'une équipe agile, avec des personnes soudées, motivées, solidaires, avec des managers à l'écoute, compréhensifs, empathiques, des clients accessibles et disponibles, ...
-Cette idéalisation se heurte souvent violemment avec la réalité de certaines entreprises et les dégâts peuvent être importants sur le point humain.
+Cette idéalisation se heurte souvent violemment à la réalité de certaines entreprises et les dégâts peuvent être importants sur le point humain.
 
 ### Les rétrospectives
 Cette idéalisation d'un monde parfait se retrouve également dans la manière dont sont réalisées les rétrospectives.
@@ -177,16 +178,18 @@ Et vous savez quoi ? Il n'y a pas que les développeurs qui commencent à rejete
 ## Artisanat
 Tout n'est pas perdu ! Nous avons le pouvoir de changer les choses :-)
 Vous êtes les créateurs de valeur de l'entreprise, vous êtes les artisans qui façonnent les produits ! Ne laissez pas les managers vous dicter les outils à utiliser pour bien faire votre travail !
-Lorsqu'un artisan intervient chez vous, est-ce que vous lui imposez quels outils il doit utiliser ? Si il vient accompagné d'un apprenti, est-ce que vous lui refusez sa présence (parce que bon, il va le ralentir et y'a pas besoin de deux personnes pour faire ce boulot quand même). Je pense que vous serez très heureux de pouvoir compter sur l'apprenti le moment venu, de savoir qu'il aura eu l'opportunité de partager l'expérience de l'artisan et qui aura déjà une très bonne connaissance du chantier.
-Pourquoi est ce qu'on n'accepte pas ce genre de comportement dans nos métiers ? Pourquoi le binômage est-il tant décrié par les managers ? Pourquoi est ce que les développeurs expérimentés sont considérés comme des personnes qui n'ont pas réussi à évoluer en chef de projet, des éternels ados ? Pourquoi une telle infantilisation ?
+Lorsqu'un artisan intervient chez vous, est-ce que vous lui imposez quels outils il doit utiliser ? Si il vient accompagné d'un apprenti, est-ce que vous lui refusez sa présence (parce que bon, il va le ralentir et y'a pas besoin de deux personnes pour faire ce boulot quand même).
+Pourquoi est ce qu'on n'accepte pas ce genre de comportement dans nos métiers ? Pourquoi le binômage est-il tant décrié par les managers ? Pourquoi est ce que les développeurs expérimentés sont considérés comme des personnes immatures qui n'ont pas réussi à évoluer en chef de projet, des éternels ados ? Pourquoi une telle infantilisation ?
+
 Vous êtes responsables de vos outils et de vos méthodes de travail. L'agilité, c'est dans l'équipe de développement qu'elle née, pas suite à des décisions de managers et de directeurs.
 Vous allez devoir maintenir demain le code que vous produisez aujourd'hui. Alors pourquoi vous mettre des bâtons dans les roues tous seuls ? Pourquoi ne pas mettre la priorité sur la qualité, le partage des connaissances au sein de l'équipe, la facilité de relecture du code, la compréhension du métier, ... ?
 En acceptant de faire du code de mauvaise qualité, dans des conditions "agiles", c'est la santé de votre projet, de l'équipe que vous mettez en péril. Et vous risquez de mettre la votre en péril également (nous en avons fait l'amère expérience, mais c'est un autre sujet ^^ )
 Commencez petit, testez des choses, voyez si ça vous convient, itérez, progressez, ... N'ayez pas peur de tenter de nouvelles approches. Au pire, vous risquez d'apprendre quelque chose ;-)
-Si vous êtes ici, c'est que vous avez à coeur de vous améliorer, d'apprendre de nouvelles choses, ... Et si ces pratiques de développement vous font peur, vous pouvez également les tester dans un environnement "safe", au cours de coding dojo par exemple. <Moment pub>Et 'hésitez pas à venir discuter avec d'autres développeurs dans les meetups Software Crafters</Moment Pub>.
+Si vous êtes ici, c'est que vous avez à coeur de vous améliorer, d'apprendre de nouvelles choses, ... Et si ces pratiques de développement vous font peur, vous pouvez également les tester dans un environnement "safe", au cours de coding dojo par exemple.
+<Moment pub>Et n'hésitez pas à venir discuter avec d'autres développeurs dans les meetups Software Crafters</Moment Pub>.
 L'agilité, ce n'est pas appliquer à la lettre toutes les pratiques et les cérémonies de tel ou tel framework. L'agilité s'appelle ainsi car son but est de s'adapter aux équipes, d'évoluer au fil du temps.
 
 ## Agile != A.G.I.L.E
-Vous pouvez tout à fait être agiles dans votre travail quotidien, sans pour autant être estampillés ou certifiés  A.G.I.L.E.
+Vous pouvez tout à fait être agiles dans votre travail quotidien, sans pour autant être estampillés ou certifiés A.G.I.L.E.
 L'agilité, c'est un état d'esprit, des valeurs, une envie de travail bien fait et utile à l'utilisateur final.
 Pas la peine de chercher un nouveau nom pour rebaptiser la volonté de faire du travail de qualité, dans un environnement bienveillant pour produire des logiciels utiles aux utilisateurs. Soyez juste agiles :-)
