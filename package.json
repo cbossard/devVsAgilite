@@ -1,54 +1,43 @@
 {
-  "name": "shower",
-  "description": "Shower HTML presentation engine",
-  "version": "2.6.8",
-  "author": {
-    "name": "Vadim Makeev",
-    "url": "https://pepelsbey.net/"
+  "name": "reveal.js",
+  "version": "3.7.0",
+  "description": "The HTML Presentation Framework",
+  "homepage": "http://revealjs.com",
+  "subdomain": "revealjs",
+  "main": "js/reveal.js",
+  "scripts": {
+    "test": "grunt test",
+    "start": "grunt serve",
+    "build": "grunt"
   },
-  "homepage": "https://github.com/shower/shower",
+  "author": {
+    "name": "Hakim El Hattab",
+    "email": "hakim.elhattab@gmail.com",
+    "web": "http://hakim.se"
+  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/shower/shower.git"
+    "url": "git://github.com/hakimel/reveal.js.git"
   },
-  "bugs": {
-    "url": "https://github.com/shower/shower/issues"
-  },
-  "license": "MIT",
-  "keywords": [
-    "shower",
-    "presentation",
-    "template"
-  ],
-  "files": [
-    "pictures/**",
-    "index.html",
-    "LICENSE.md",
-    "README.md"
-  ],
-  "dependencies": {
-    "@shower/material": "^2.2.0",
-    "@shower/ribbon": "^3.2.1",
-    "shower-core": "^2.1.0"
+  "engines": {
+    "node": ">=4.0.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "del": "^3.0.0",
-    "gh-pages": "^2.0.0",
-    "gulp": "^4.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^1.0.0",
-    "gulp-zip": "^4.0.0",
-    "merge-stream": "^1.0.0",
-    "path-exists-cli": "^1.0.0",
-    "shower-cli": "^0.2.3"
+    "express": "^4.16.2",
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-qunit": "^2.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-retire": "^1.0.7",
+    "grunt-zip": "~0.17.1",
+    "mustache": "^2.3.0",
+    "socket.io": "^1.7.3"
   },
-  "scripts": {
-    "pdf": "shower pdf",
-    "start": "gulp serve",
-    "prepare": "gulp prepare",
-    "archive": "gulp archive",
-    "publish": "gulp publish",
-    "test": "npm run prepare && ls prepared && npm run archive && path-exists archive.zip"
-  }
+  "license": "MIT"
 }

@@ -1,511 +1,628 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Développeurs vs. agilité</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+		<link rel="stylesheet" href="css/shower.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section  data-background="pictures/b&w/kelly-sikkema-530092-unsplash.jpg">
+					<h2 style="font-size: 70px; text-align: center">Agilité et développeurs</h2>
+					<h1 style="font-size: 127px; text-align: center;padding-top: 10%;">La guerre est déclarée ?</h1>
+					<p>
+						<small><i>Cécilia Bossard et Jean Paliès</i></small>
+					</p>
+					<figcaption class="copyright right white">
+						 <a href="https://unsplash.com/photos/E8H76nY1v6Q">Photo by Kelly Sikkema on Unsplash</a>
+					</figcaption>
+				</section>
+
+				<section>
+					<div style="display:block; width: 100%;height: 80%;">
+						<div style="clear: both;">
+							<div style="height: 20%; float: left; overflow: hidden; padding: 3px 1.8%; width: 25%; "> <img src="pictures/b&amp;w/cecilia.jpeg" style="border-radius: 50%; width: 75%;"> </div>
+							<div style="height: 20%; float: left; overflow: hidden; padding: 3px 1.8%; width: 60%; ">
+								<h2 style="font-size: 50px;">Cécilia Bossard</h2>
+								<p style="font-size:30px">Développeuse, agiliste, boîte à outils, ...</p>
+								<div style="display: grid;width: 100%;grid-column-gap: 75px;grid-template-columns: 1fr 1fr; height: 40px;">
+									<i class="fa fa-twitter" style="font-size: 25px;">@ceciliaBossard</i>
+								  <img src="pictures/b&amp;w/cl-logo-big-2017.svg" style="width: 35%; max-height: 100%">
+								</div>
+							</div>
+						</div>
+						<div style="clear: both;">
+							<div style="height: 20%; float: left; overflow: hidden; padding: 3px 1.8%; width: 25%; "> <img src="pictures/b&amp;w/jean.jpeg" style="border-radius: 50%; width: 75%;"> </div>
+							<div style="height: 20%; float: left; overflow: hidden; padding: 3px 1.8%; width: 60%; ">
+								<h2 style="font-size: 50px;">Jean Paliès</h2>
+								<p style="font-size:30px">Développeur freelance</p>
+								<div style="display: grid;width: 100%;grid-column-gap: 75px;grid-template-columns: 1fr 1fr">
+									 <i class="fa fa-twitter" style="font-size: 25px;">@jpalies</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 
 
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <title>Développeurs vs. agilité</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-      <style>
-         .shower {
-         --slide-ratio: calc(16 / 9);
-         }
-         .shower h1 {
-         margin: 30px 0 0;
-         color: #FF4C4C;
-         text-align: center;
-         font-size: 70px;
-         }
-         .shower h2 {
-         color: #cc0000;
-         margin: 30px 0 0;
-         text-align: left;
-         font-size: 70px;
-         }
-         .shower p {
-         color: black;
-         }
-         .shower li {
-         color: black;
-         }
-      </style>
-   </head>
-   <body class="shower list">
-      <section class="slide" id="cover">
-         <h2 >Agilité et développeurs</h2>
-         <h1 class="shout">La guerre est déclarée ?</h1>
-         <figure>
-            <img class="cover width" src="pictures/b&w/kelly-sikkema-530092-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/E8H76nY1v6Q">Photo by Kelly Sikkema on Unsplash</a>
-            </figcaption>
-         </figure>
-         <p class="place bottom">Cécilia Bossard et Jean Paliès</p>
-         <style>
-            #cover p {
-            margin: 10px 0 0;
-            text-align: center;
-            font-style: italic;
-            font-size: 20px;
-            color: grey;
-            }
-            #cover h2 {
-            text-align: center;
-            }
-         </style>
-      </section>
-      <section class="slide" id="us">
-         <table>
-            <tr>
-               <td style="width:30%">  <img src="pictures/b&w/cecilia.jpeg" style="border-radius: 50%; width: 75%;"></td>
-               <td>
-                  <h2>Cécilia Bossard</h2>
-                  <p>Développeuse, agiliste, boîte à outils, ...</p>
-                  <div class="columns two">
-                     <p><img src="pictures/twitter.png">@ceciliaBossard</p>
-                     <p><img src="pictures/b&w/cl-logo-big-2017.svg" style="width: 35%;"></p>
-                  </div>
-               </td>
-            </tr>
-            <tr>
-               <td>  <img src="pictures/b&w/jean.jpeg" style="border-radius: 50%; width: 75%;"></td>
-               <td>
-                  <h2>Jean Paliès</h2>
-                  <p>Développeur freelance</p>
-                  <p><img src="pictures/twitter.png">@jpalies</p>
-               </td>
-            </tr>
-         </table>
-         <style>
-            #us h2 {
-            font-size: 40px;
-            }
-            #us tr:not(:last-of-type) > * {
-            background: none;
-            }
-         </style>
-      </section>
-      <section class="slide" id="survey">
-         <figure>
-            <img class="cover width" src="pictures/ask-blackboard-356079.jpg">
-         </figure>
-         <h1 class="shout">Petit sondage</h1>
-      </section>
-      <section class="slide" id="constat">
-         <figure>
-            <img class="cover width" src="pictures/b&w/jose-aragones-627837-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/81QkOoPGahY">Photo by Jose Aragones on Unsplash</a>
-            </figcaption>
-         </figure>
-         <h1>Constat : rejet de l'agilité</h1>
-         <p class="place bottom next">Pourquoi ?</p>
-         <style>
-            #constat p {
-            text-align: center;
-            font-size: 70px;
-            }
-         </style>
-      </section>
-      <section class="slide" id="trauma">
-         <h2>Constat</h2>
-         <h3>Traumatisme</h3>
-         <figure>
-            <img class="cover" src="pictures/b&w/anthony-tran-679123-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/i-ePv9Dxg7U">Photo by Anthony Tran on Unsplash</a>
-            </figcaption>
-         </figure>
-         <style>
-            #trauma .cover {
-            z-index: auto;
-            left: 82%;
-            }
-         </style>
-      </section>
-      <section class="slide" id="picture">
-         <figure>
-            <img class="cover width" src="pictures/programmingMotherfucker.png" alt="Programming MotherFucker">
-            <figcaption class="copyright right white">
-               <a href="http://programming-motherfucker.com/">© Zed A. Shaw</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide" id="picture">
-         <figure>
-            <img class="cover width" src="pictures/programmingMotherfucker2.png" alt="Programming MotherFucker">
-            <figcaption class="copyright right white">
-               <a href="http://programming-motherfucker.com/">© Zed A. Shaw</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide" id="why">
-         <h2>Constat</h2>
-         <div class="columns two">
-            <span>
-               <ul>
-                  <li>C'est notre quotidien.</li>
-                  <li>C'est du bullshit marketing</li>
-                  <li>C'est plein de process, de réunions, ... on n'a plus le temps de bosser</li>
-                  <li>C'est une volonté de la direction</li>
-               </ul>
-            </span>
-            <figure>
-               <img class="cover" src="pictures/b&w/ken-treloar-346065-unsplash.jpg">
-               <figcaption class="copyright right white">
-                  <a href="https://unsplash.com/photos/yjePAp-tpmQ">Photo by Ken Treloar on Unsplash</a>
-               </figcaption>
-            </figure>
-         </div>
-         <style>
-            #why .cover {
-            left: 82%;
-            z-index: auto;
-            }
-            #why li {
-            font-size: 23px;
-            }
-            /* #why li:before {
-            font-family:FontAwesome;
-            position: absolute;
-            left: 0;
-            color:#318ca0;
-            font-size:32px;
-            content:"f138";
-            } */
-         </style>
-      </section>
-      <section class="slide" id="perversion">
-         <figure>
-            <img class="cover width" src="pictures/b&w/scott-webb-274694-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/yekGLpc3vro">Photo by Scott Webb on Unsplash</a>
-            </figcaption>
-         </figure>
-         <h1 class="shout">Perversion de l'agilité</h1>
-      </section>
-      <section class="slide">
-         <h2>Perversion de l'agilité</h2>
-         <figure>
-            <blockquote>
+				<section data-background-color="black" data-background="pictures/ask-blackboard-356079.jpg" data-background-size="contain" data-background-position="center">
+					<h1 class="shout">Petit sondage</h1>
+					<aside class="notes">
+						<ul>
+							<li>Qui est développeur ?</li>
+							<li>Qui a envie de travailler sur un projet agile ?</li>
+							<li>Qui travaille sur un projet en mode agile ?</li>
+							<li>Qui est satisfait du produit qu'il livre ? (qualité du code, satisfaction des utilisateurs, ...)</li>
+					</ul>
+					</aside>
+				</section>
+
+				<section data-background="pictures/b&w/will-porada-1272318-unsplash.jpg">
+					<h1 style="padding-bottom : 10%">Constat :</h1>
+					<h1 style="padding-top: 15%">Rejet de l'agilité</h1>
+					<figcaption class="copyright right white">
+						 <a href="https://unsplash.com/photos/ZaGcU6BxJEc">Photo by Will Porada on Unsplash</a>
+					</figcaption>
+					<aside class="notes">
+					 Travailler en mode agile reste attractif pour la plupart des développeurs<br>
+					 Mais constat d'une sorte de rejet du mouvement.<br/>
+On ne voit plus de développeurs dans les conférences agiles, et on ne voit plus d'agilistes aux conférences de développeurs.<br/>
+Certains développeurs ne veulent même plus entendre parler d'agilité.<br/>
+On peut donc se demander pourquoi une telle scission ?
+</aside>
+				</section>
+
+
+
+				<section data-background="pictures/b&w/anthony-tran-679123-unsplash.jpg">
+						<h2 class="shout">Traumatisme</h2>
+						<figcaption class="copyright right white">
+							 <a href="https://unsplash.com/photos/i-ePv9Dxg7U">Photo by Anthony Tran on Unsplash</a>
+						</figcaption>
+					<aside class="notes">
+						Un certain nombre de développeurs ont vécu l'agilité sur leur projet comme un traumatisme.
+<br/>
+						Ils ne veulent surtout plus jamais travailler dans de telles conditions.
+<br/>
+						Ces signaux sont assez inquiétants et font se poser pas mal de questions sur les éventuelles dérives qui ont pu avoir lieu.
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/programmingMotherfucker.png"  data-background-size="contain" data-background-position="center">
+					<figcaption class="copyright right white">
+						 <a href="http://programming-motherfucker.com/">© Zed A. Shaw</a>
+					</figcaption>
+					<aside class="notes">
+On peut également observer de tels mouvements de développeurs, qui peuvent être mal accueillis car ils renforcent les stéréotypes des dev pas intéressés par autre chose que le code.
+				</aside>
+				</section>
+
+				<section data-background="pictures/programmingMotherfucker2.png"  data-background-size="contain" data-background-position="center">
+					<figcaption class="copyright right white">
+						 <a href="http://programming-motherfucker.com/">© Zed A. Shaw</a>
+					</figcaption>
+					<aside class="notes">
+Mais quand on regarde un peu plus, on commence à avoir quelques pistes d'explication...
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/evan-dennis-75563-unsplash.jpg"  >
+
+
+							<h2>Pourquoi ?</h2>
+				 			 <ul>
+				 					<li>C'est notre quotidien.</li>
+				 					<li>C'est du bullshit marketing</li>
+				 					<li>C'est plein de process, de réunions, ... on n'a plus le temps de bosser</li>
+				 					<li>C'est une volonté de la direction</li>
+				 			 </ul>
+
+
+						<figcaption class="copyright right black"  >
+							 <a href="https://unsplash.com/photos/i--IN3cvEjg">Photo by Evan Dennis on Unsplash</a>
+						</figcaption>
+
+					<aside class="notes">
+						On a émis plusieurs hypothèses :
+						<ul>
+							<li>Tous les projets fonctionnent en mode agile et tout va bien dans le monde des bisounours. => on n'en parle plus, point.</li>
+							<li>Bullshit marketing => c'est n'importe quoi, ça part dans tous les sens. On ne veut plus en entendre parler</li>
+						 	<li>Plein de process, de réunions, ... on n'a plus le temps de bosser => c'est lourdingue</li>
+							<li>Volonté de la direction. Avec notre taille de boîte, on passe à de l'agilité "at scale" => c'est une question politique qui ne nous concerne pas</li>
+						</ul>
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/scott-webb-274694-unsplash.jpg">
+						<h1 class="shout" style="padding-top: 55%">Perversion de l'agilité</h1>
+						<figcaption class="copyright right white">
+							 <a href="https://unsplash.com/photos/yekGLpc3vro">Photo by Scott Webb on Unsplash</a>
+						</figcaption>
+						<aside class="notes">
+						Première constatation, l'agilité a été pervertie au fil du temps.
+					</aside>
+				</section>
+
+				<section >
+						<!-- <h2>Perversion de l'agilité</h2> -->
+						<blockquote>
                <p>The Agile movement was started by programmers, and software professionals, who held the ideals of Craftsmanship dear.  </p>
                <p>But then the project managers rushed in and said: “Wow! Agile is a cool new variation on how to manage projects.”</p>
             </blockquote>
             <figcaption>Uncle Bob, August 2018</figcaption>
-         </figure>
-      </section>
-      <section class="slide" id="history">
-         <h2>Perversion de l'agilité</h2>
-         <h3>Refaisons l'histoire</h3>
-         <ul>
-            <li>L'agilité créée par et pour des développeurs <br/> (RAD, DSDM, XP, Manifeste)</li>
-            <li>Popularisation de Scrum</li>
-            <li>Monétisation de l'agilité <br/>(Scrum Alliance, certifications, ...)</li>
-         </ul>
-         <figure>
-            <img class="cover" src="pictures/b&w/erol-ahmed-460283-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/N23rmTcf0NA">Photo by Erol Ahmed on Unsplash</a>
-            </figcaption>
-         </figure>
-         <style>
-            #history .cover {
-            left: 82%;
-            z-index: auto;
-            }
-         </style>
-      </section>
-      <section class="slide" id="apple">
-         <h2>Perversion de l'agilité</h2>
-         <h3>L'agilité est entrée dans les moeurs</h3>
-         <figure>
-            <img class="cover width" src="pictures/b&w/joshua-hoehne-1054014-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/FFn2-TW8pxk">Photo by Joshua Hoehne on Unsplash</a>
-            </figcaption>
-         </figure>
-         <style>
-            /* #apple div {
-            opacity: 0.7;
-            background-color: white;
-            }
-            #apple p {
-            opacity: 1;
-            } */
-         </style>
-      </section>
-      <section class="slide">
-         <figure>
-            <img class="cover width" src="pictures/b&w/AgileManifesto.png">
-         </figure>
-      </section>
-      <section class="slide">
-         <h2>Perversion de l'agilité</h2>
-         <figure>
-            <blockquote>
-               <p>The Agile movement got so involved with promoting conferences and with certifying Scrum Masters and Project Managers that they abandoned the programmers, and the values and disciplines of Craftsmanship.</p>
-            </blockquote>
-            <figcaption>Uncle Bob, August 2018</figcaption>
-         </figure>
-      </section>
-      <section class="slide">
-         <h1 class="shout">Excellence technique</h1>
-         <figure>
-            <img class="cover width" src="pictures/b&w/clark-young-143623-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/tq7RtEvezSY">Photo by Clark Young on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
-         <h2>Excellence technique</h2>
-         <figure>
-            <blockquote>
-               <p>The tragedy is that the Agile movement was supposed to promote the ideals of Craftsmanship; and it failed.  Horribly.</p>
-            </blockquote>
-            <figcaption>Uncle Bob, August 2018</figcaption>
-         </figure>
-      </section>
-      <section class="slide">
-         <h2>Excellence technique</h2>
-         <h3><br>Faire agile != être agile</h3>
-         <figure>
-            <img class="cover width" src="pictures/b&w/david-siglin-87978-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/UuW4psOb388">Photo by David Siglin on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide" id="picture">
-         <figure>
-            <img class="cover" src="pictures/PratiquesXP.jpg" alt="Pratiques XP">
-            <figcaption class="copyright right black">
-               <a href="https://www.tutorialspoint.com/extreme_programming/extreme_programming_supporting_practices.htm">© www.tutorialspoint.com</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide" id="indicators">
-         <h1 class="shout">Une gestion par les indicateurs</h1>
-         <figure>
-            <img class="cover width" src="pictures/audio-dj-mix-63703.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://www.pexels.com/photo/table-music-power-sound-63703/"> Photo by Stephen Niemeier from Pexels </a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide" id="charts">
-         <h2>Une gestion par les indicateurs</h2>
-         <h3>
-            Les indicateurs biaisent la relation au travail.
-         </h3>
-         <figure>
-            <img class="cover width" src="pictures/b&w/mika-baumeister-703680-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/Wpnoqo2plFA">Photo by Mika Baumeister on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
+						<aside class="notes">
+							Uncle Bob a très bien décrit ce phénomène dans un de ses articles d'août 2018.<br/>
+							A l'origine, l'agilité a été créée par des programmeurs, qui avaient à coeur de faire un travail de qualité.<br/>
+							Réaction d'auto-défense parce qu'ils sentaient que leur utilité était remise en question, les managers se sont emparés de l'agilité et en ont exclus les développeurs : c'est de la gestion de projets, non ?<br/>
+							Typiquement, dans les conférences sur l'agilité, qui voyons-nous ? Il n'y a plus ni développeurs ni entrepreneurs. Seul reste le middle management qui semble chercher à justifier sa place en s'emparant de ces méthodes.
+
+					</aside>
+				</section>
+
+				<section data-background="pictures/b&w/thomas-kelley-128626-unsplash.jpg">
+
+				<h2 >Refaisons l'histoire</h2>
+
+				<ul>
+					 <li>L'agilité créée par et pour des développeurs <br/> (RAD, DSDM, XP, Manifeste)</li>
+					 <li>Popularisation de Scrum</li>
+					 <li>Monétisation de l'agilité <br/>(Scrum Alliance, certifications, ...)</li>
+				</ul>
+				<figcaption class="copyright right white" >
+					 <a href="https://unsplash.com/photos/hHL08lF7Ikc">Photo by Thomas Kelley on Unsplash</a>
+				</figcaption>
+				<aside class="notes">
+
+					L'agilité a donc été créée par des programmeurs, pour des programmeurs et des utilisateurs heureux (RAD, DSDM, XP, Manifeste)<br/>
+					Puis on a vu l'apparition de Scrum, qui proposait un cadre bien défini, des règles et des process.<br/>
+					Les histoires de projets réussis grâce à l'agilité ont donné envie à de plus en plus de personnes de s'y mettre, sans pour autant en comprendre les valeurs intrinsèques.<br/>
+					Avec la popularisation de Scrum, on a pu observer une monétisation de l'agilité, via des formations, des certifications, des audits de maturité agile, du passage à l'échelle, ... <br/>
+					Tout ça sans prendre en compte le coeur même de l'agilité, à savoir les personnes qui font le travail.
+
+			</aside>
+				</section>
+
+				<section data-background="pictures/b&w/joshua-hoehne-1054014-unsplash.jpg">
+					<h2>L'agilité est entrée dans les moeurs</h2>
+					<figcaption class="copyright right white">
+						 <a href="https://unsplash.com/photos/FFn2-TW8pxk">Photo by Joshua Hoehne on Unsplash</a>
+					</figcaption>
+					<aside class="notes">
+						L'agilité est entrée dans les moeurs. Mais comme toutes les choses qui deviennent populaires, elles perdent peu à peu de leur essence.
+						On met de l'agilité à toutes les sauces, pour justifier tout et son contraire.<br/>
+						Le projet est en retard ? C'est sûrement la faute de l'agilité. Ces développeurs n'en font qu'à leur tête.<br/>
+						Des bugs ? Rhalala ces méthodes de hippies sont vraiment pas fiables.<br/>
+						Le client est satisfait ? A par contre, là c'est grâce au chef de projet.
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/AgileManifesto.png" data-background-size="contain" data-background-position="center">
+					<aside class="notes">
+						Nous avons rencontré un certain nombre de scrum masters qui n'avaient jamais lu le manifeste agile.<br/>
+					Dans le doute, nous vous faisons donc une petite piqûre de rappel !
+
+				</aside>
+				</section>
+
+				<section>
+					<!-- <h2>Perversion de l'agilité</h2> -->
+					<figure>
+             <blockquote>
+                <p>The Agile movement got so involved with promoting conferences and with certifying Scrum Masters and Project Managers that they abandoned the programmers, and the values and disciplines of Craftsmanship.</p>
+             </blockquote>
+             <figcaption>Uncle Bob, August 2018</figcaption>
+          </figure>
+					<aside class="notes">
+						Encore un fois, Uncle Bob tape assez justement (toujours dans le même article) en critiquant les dérives du mouvement agile.<br/>
+						Avec toutes ces conférences, certifications et autres, il y a eu un abandon des programmeurs et des valeurs de l'eXtreme programming.<br/>
+						On ne se concentre plus que sur la gestion de projets, et plus du tout sur la manière dont les projets sont effectivement réalisés techniquement au quotidien.
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/clark-young-143623-unsplash.jpg">
+						<h1 class="shout">Excellence technique</h1>
+						<figcaption class="copyright right white">
+							 <a href="https://unsplash.com/photos/tq7RtEvezSY">Photo by Clark Young on Unsplash</a>
+						</figcaption>
+						<aside class="notes">
+							L'agilité repose avant tout sur une excellence technique.<br/>
+							 C'est d'ailleurs un des principes du manifeste : "Une attention continue à l'excellence technique et à un bon design renforce l'agilité."
+
+					</aside>
+				</section>
+
+				<section>
+						 <!-- <h2>Excellence technique</h2> -->
+						 <figure>
+		            <blockquote>
+		               <p>The tragedy is that the Agile movement was supposed to promote the ideals of Craftsmanship; and it failed.  Horribly.</p>
+		            </blockquote>
+		            <figcaption>Uncle Bob, August 2018</figcaption>
+		         </figure>
+						 <aside class="notes">
+Encore une fois, le constat est assez accablant.
+					 </aside>
+				</section>
+
+				<section data-background="pictures/b&w/david-siglin-87978-unsplash.jpg">
+          <h2><br>Faire agile != être agile</h2>
+					<figcaption class="copyright right black">
+						 <a href="https://unsplash.com/photos/UuW4psOb388">Photo by David Siglin on Unsplash</a>
+					</figcaption>
+					<aside class="notes">
+						Il y a une différence entre être agile et faire agile.<br/>
+						Si vous dites "On est agile dans l'équipe ! On fait de la revue de code, de l'intégration continue, parfois quelques tests, et des estimations collectives", malheureusement, mon brave, c'est un package.<br/>
+						On ne peut pas juste prendre les pratiques qui nous arrangent :<br/>
+						"Alors je prendrais la revue de code, mais pas le binômage (non mais, je ne vais pas payer deux personnes pour faire le boulot d'un seul quand même).
+						Je prendrais aussi un peu de tests unitaires, mais pas trop, c'est pas bon pour la ligne des plannings, ça fait grossir les temps de développement. Mais les trucs comme TDD, BDD, j'y comprends rien, j'en veux pas. C'est pour les hippies hipsters.
+						Bon, l'intégration continue, c'est devenu la norme quand même, je vais pas y couper.
+						Et pour faire plaisir aux développeurs, on va ajouter un peu d'estimations collectives, ils auront l'impression d'avoir leur mot à dire comme ça.
+						Par contre, le rythme soutenable, c'est bien joli votre idée de bisounours, mais on a un business à faire tourner quand même ! "
+<br/>
+						La base de l'agilité repose sur une bonne conception, un code évolutif et simple. Les auteurs du manifeste n'ont peut-être pas assez insisté sur ce point ou ça leur paraissait tellement évident qu'ils ne l'ont pas rendu suffisamment explicite.
+				</aside>
+				</section>
+
+				<section data-background="pictures/PratiquesXP.jpg" data-background-size="contain" data-background-position="center">
+					<figcaption class="copyright right black">
+						 <a href="https://www.tutorialspoint.com/extreme_programming/extreme_programming_supporting_practices.htm">© www.tutorialspoint.com</a>
+					</figcaption>
+					<aside class="notes">
+						Les pratiques de l'extreme programming sont toutes conditionnées entre elles. <br/>
+						On ne peut pas prendre une seule pratique sans tirer le reste de la pelote.<br/>
+	Et pourtant, ce n'est pas ce qu'on peut observer sur la plupart des projets agiles ?<br/>
+	Qui parmi vous met en place au moins une de ces pratiques ?<br/>
+	Deux ? Trois ? Toutes ?
+	En passant, vous constaterez que les deux points centraux sont les tests et le binômage, pratiques les plus considérées comme de la "perte de temps".<br/>
+	C'est de la perte de temps, et en plus, on ne voit pas ce que ça apporte dans les indicateurs du projet
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/audio-dj-mix-63703.jpg">
+ 					<h1 class="shout">Une gestion par les indicateurs</h1>
+					<figcaption class="copyright right white">
+						 <a href="https://www.pexels.com/photo/table-music-power-sound-63703/"> Photo by Stephen Niemeier from Pexels </a>
+					</figcaption>
+					<aside class="notes">
+						La popularisation de scrum, et de sa liste d'indicateurs comme les burndown, burnup, le management visuel associé aux méthodes agiles ont permis aux managers de renforcer leur gestion par les indicateurs<br/>
+						 ("Wahou ! Top bien ! Plein de nouveaux KPIs pour tracker le travail des autres !")
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/mika-baumeister-703680-unsplash.jpg">
+				  <h2>
+				 		Les indicateurs biaisent la relation au travail.
+				  </h2>
+					<figcaption class="copyright right black">
+						 <a href="https://unsplash.com/photos/Wpnoqo2plFA">Photo by Mika Baumeister on Unsplash</a>
+					</figcaption>
+					<aside class="notes">
+						Les indicateurs biaisent la relation au travail. Les outils supposés apporter de la transparence se retournent contre leurs auteurs.<br/>
+						"Pourquoi est-ce que le burndown n'avance pas ?", "Pourquoi est ce que tu n'as pas diminué ton reste à faire ?", "Machin a fait plus de tâches que toi lors du dernier sprint. Tu n'es pas vraiment impliqué dans ton travail..."
+						On observe des dérives assez malsaines :
+						<ul>
+							<li> par exemple, les développeurs ne vont prendre que les petites tâches pour montrer qu'ils avancent vite. Et les tâches complexes qui prennent du temps ne sont jamais faites.</li>
+					 	  <li> certains scrum masters sont objectivés sur le burndown. Il faut donc à tout prix qu'il soit le plus rectiligne possible, quitte à tricher</li>
+						  <li>on ne veut surtout pas de rouge dans les "mood boards". Tout va bien dans l'équipe et tout le monde est heureux.</li>
+					 </uL>
+
+						Ces indicateurs étaient supposés apporter de la transparence et permettre de lancer des alertes au plus tôt pour rectifier le tir. <br/>
+						Ils ont été déviés de leur raison d'être pour servir d'indicateurs sur la performance des personnes et sont même utilisés comme moyen de mesurer l'atteinte des objectifs définis lors des entretiens annuels.
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/active-angry-army-279991.jpg">
          <h1 class="shout">Un outil imposé</h1>
-         <figure>
-            <img class="cover width" src="pictures/active-angry-army-279991.jpg">
-         </figure>
-      </section>
-      <section class="slide" id="clientWill">
-         <h2>Un outil imposé</h2>
-         <h3>C'est ce que demandent les clients désormais</h3>
-         <figure>
-            <img class="cover width" src="pictures/b&w/freestocks-org-187367-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/_3Q3tsJ01nc">Photo by freestocks.org on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
-         <h2>Un outil imposé</h2>
-         <b>
-         <ul>
-            <li class="next">Changement des priorités</li>
-            <li class="next">Pas de specs</li>
-            <li class="next">ROI rapide</li>
-            <li class="next">Reporting détaillés, KPI</li>
-            <li class="next">Recyclage des chefs de projet</li>
-            <li class="next">Ca fait cool</li>
-            <li class="next">JIRA</li>
-         </ul>
-       </b>
-         <figure>
-            <img class="cover width" src="pictures/b&w/paul-hanaoka-1373430-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/4ZaH0DGGomI">Photo by Paul Hanaoka on Unsplash</a>
-            </figcaption>
+				 <aside class="notes">
+					 Avec tous ces nouveaux indicateurs, les managers trouvent que l'agilité, c'est vraiment quelque chose de bien, qu'il faut absolument mettre en place.
 
-         </figure>
-      </section>
-      <section class="slide" id="picture">
-         <figure>
-            <img class="cover" src="pictures/b&w/transfoAgile.jpeg" alt="Transformation agile">
-         </figure>
-      </section>
-      <section class="slide">
-         <h1 class="shout">Un monde de Bisounours ?</h1>
-         <figure>
-            <img class="cover width" src="pictures/b&w/bokeh-lights-plush-toy-869517.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://www.pexels.com/photo/bokeh-photography-of-pink-bear-plush-toy-869517/">Photo by Akshar Dave from Pexels </a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide" id="ideal">
-         <h2>Un monde de Bisounours ?</h2>
-         <h3><br>
-            Idéalisation de l'image d'une équipe agile.
-         </h3>
-         <figure>
-            <img class="cover width" src="pictures/b&w/rawpixel-653764-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/mcLpPD36-2k">Photo by rawpixel on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide" id="retro">
-         <h2>Un monde de Bisounours ?</h2>
-         <h3>Les rétrospectives</h3>
-         <figure>
-            <img class="cover width" src="pictures/b&w/sydney-sims-519706-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/fZ2hMpHIrbI">Photo by Sydney Sims on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
-         <h2>Un monde de Bisounours ?</h2>
-         <h3>Coaching personnel ?!?!</h3>
-         <p>Lead, don't tell !</p>
-         <figure>
-            <img class="cover width" src="pictures/b&w/smart-304883-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/IM0GHpsjJic">Photo by Smart on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
-         <h2>Un monde de Bisounours ?</h2>
-         <h3>Energizers ...</h3>
-         <p> WTF ?</p>
-         <figure>
-            <img class="cover width" src="pictures/b&w/braydon-anderson-105552-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/wOHH-NUTvVc">Photo by Braydon Anderson on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
+			 </aside>
+				</section>
+
+				<section data-background="pictures/b&w/freestocks-org-187367-unsplash.jpg">
+
+					<h2>C'est ce que demandent les clients désormais</h2>
+					<figcaption class="copyright right white">
+						 <a href="https://unsplash.com/photos/_3Q3tsJ01nc">Photo by freestocks.org on Unsplash</a>
+					</figcaption>
+					<aside class="notes">
+En plus, maintenant que les clients en ont entendu parler, c'est ce qu'ils veulent, c'est ce qui est à la mode.
+<br/>Donc on est obligé de passer en mode agile.
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/paul-hanaoka-1373430-unsplash.jpg">
+<b>
+						<ul>
+							 <li>Changement des priorités</li>
+							 <li class="fragment">Pas de specs</li>
+							 <li class="fragment">ROI rapide</li>
+							 <li class="fragment">Reporting détaillés, KPI</li>
+							 <li class="fragment">Recyclage des chefs de projet</li>
+							 <li class="fragment">Ca fait cool</li>
+							 <li class="fragment">JIRA</li>
+						</ul>
+	</b>
+					<figcaption class="copyright right black">
+						 <a href="https://unsplash.com/photos/4ZaH0DGGomI">Photo by Paul Hanaoka on Unsplash</a>
+					</figcaption>
+					<aside class="notes">
+						En plus, l'agilité, c'est vraiment chouette !
+						<ul>
+							<li>On va pouvoir changer les priorités n'importe quand (comment ça, on n'a pas le droit de le faire pendant le sprint ? Vous êtes agiles, non ?)</li>
+							<li> On va pouvoir ne pas faire de specs ni vraiment définir notre besoin. Ça doit tenir sur un post-it, non ?</li>
+							<li>On va faire un max de fonctionnalités qui vont rapporter de l'argent. La qualité, on verra plus tard. On livre vite vite un max de trucs pour faire de l'argent / faire plaisir aux actionnaires et avoir notre prime</li>
+							<li>On va faire des reportings détaillés parce que personne ne comprends plus rien à ce qui est fait. (c'est pas ce qu'on appelle la transparence de l'équipe ?)</li>
+							<li>On ne va surtout pas mettre un utilisateur au sein des équipes et laisser les développeurs leur parler directement. On sait jamais ce qu'ils vont dire ces ours asociaux. En plus, chez nous, on a plein de chefs de projet à recycler => hop ! proxy proxy proxy PO, nickel</li>
+							<li>Pour montrer qu'on est jeune et dynamique, on va coller plein de post-its aux murs, qui ne bougeront jamais ou finiront par tomber de vieillesse</li>
+							<li>On va utiliser des supers outils comme Jira, et tant pis si ça ne convient pas à l'équipe, elle s'adaptera. Jira c'est cool, c'est pro, ça fait des beaux rapports d'avancement.</li>
+					</ul>
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/transfoAgile.jpeg" data-background-size="contain" data-background-position="center">
+					<aside class="notes">
+						OK, donc Vous faites des daily scrums qui se rapprochent plus du reporting envers le management, vous faites des itérations, vous avez un scrum master certifié, ancien chef de projet, qui protège l'équipe en leur épargnant les tâches douloureuses d'auto-organisation en assignant les tâches aux développeurs, avec un PO qui en fait est un ancien chef de projet fonctionnel, donc qui n'a jamais pratiqué le métier du client, qui n'utilisera jamais de sa vie le produit développé et qui en fait est juste un passe plats entre le client et l'équipe de développement...  Je pense que ce n'est pas tout à fait l'esprit ...
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/bokeh-lights-plush-toy-869517.jpg">
+ 					<h1 class="shout">Un monde de Bisounours ?</h1>
+					<figcaption class="copyright right white">
+						 <a href="https://www.pexels.com/photo/bokeh-photography-of-pink-bear-plush-toy-869517/">Photo by Akshar Dave from Pexels </a>
+					</figcaption>
+					<aside class="notes">
+						L'agilité a également tendance à être présentée comme une méthode de bisounours. Tout le monde est content et fait ce qui lui plaît.
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/rawpixel-653764-unsplash.jpg">
+
+          <h2>
+             Idéalisation de l'image d'une équipe agile.
+          </h2>
+					<figcaption class="copyright right white">
+						 <a href="https://unsplash.com/photos/mcLpPD36-2k">Photo by rawpixel on Unsplash</a>
+					</figcaption>
+					<aside class="notes">
+						On constate une sorte d'idéalisation de l'image d'une équipe agile,<br/>
+						 avec des personnes soudées, motivées, solidaires, <br/>
+						 avec des managers à l'écoute, compréhensifs, empathiques, <br/>
+						 des clients accessibles et disponibles, ...<br/>
+		Cette idéalisation se heurte souvent violemment à la réalité de certaines entreprises et les dégâts peuvent être importants sur le point humain.
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/sydney-sims-519706-unsplash.jpg">
+
+					<h2>Les rétrospectives</h2>
+					<figcaption class="copyright right white">
+						 <a href="https://unsplash.com/photos/fZ2hMpHIrbI">Photo by Sydney Sims on Unsplash</a>
+					</figcaption>
+					<aside class="notes">
+						Cette idéalisation d'un monde parfait se retrouve également dans la manière dont sont réalisées les rétrospectives.<br/>
+					On ne parle pas des sujets qui fâchent (encore moins si le client participe à la rétro, <br/>
+					quitte à en faire une "interne" pour laver son linge sale en famille, et une autre avec le client).<br/>
+					Trop souvent, les rétros aboutissent à une liste d'actions beaucoup trop ambitieuse, et on se retrouve à ne pas réaliser la moitié des choses à faire, et les points réalisés sont en général les actions marginales sans grand impact (il ne faudrait pas modifier l'ordre établi non plus).<br/>
+					A quoi servent ces rétrospectives ? Est-ce que l'équipe améliore ses pratiques ? Est-ce que le travail réalisé s'en trouve amélioré ?
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/smart-304883-unsplash.jpg">
+          <h2>Lead, don't tell !</h2>
+					<figcaption class="copyright right white">
+						 <a href="https://unsplash.com/photos/IM0GHpsjJic">Photo by Smart on Unsplash</a>
+					</figcaption>
+					<aside class="notes">
+						Parfois, on s'approche de méthodes de coaching personnel.<br/>
+						On traite de sujet hyper personnels qui ne devraient pas être abordés dans un contexte professionnel ou en tout cas, pas en réunion devant toute l'équipe.<br/>
+						On peut essayer de changer la façon dont les gens travaillent, mais pas la façon dont les gens sont.<br/>
+						Lead, don't tell : montrer par l'exemple, pas de comportement prescriptif
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/braydon-anderson-105552-unsplash.jpg">
+          <h2 >Energizers ... WTF ?</h2>
+					<figcaption class="copyright right white">
+						 <a href="https://unsplash.com/photos/wOHH-NUTvVc">Photo by Braydon Anderson on Unsplash</a>
+					</figcaption>
+
+					<aside class="notes">
+						Une autre dérive de l'agilité qu'on peut observer, c'est l'utilisation à outrance d'energizers ou de gamification extrême de toutes les réunions.<br/>
+						Leur utilité peut se comprendre dans certaines conditions (pour faire passer certains messages ou concepts par exemple), mais pas systématiquement, pas de manière obligatoire, pas en mettant les personnes dans des conditions qu'ils considèrent inconfortables ou dégradantes. <br/>
+						Le bizutage est interdit, pourquoi vouloir continuer ce genre de comportement en entreprise ?<br/>
+						De plus, l'utilisation de jeux, même si cela permet de faire passer facilement des messages, accentue l'image décrédibilisante des développeurs qui seraient des éternels enfants, que l'on peut amadouer avec des nerfs, des bonbons ou des tables de ping-pong.
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/markus-spiske-773758-unsplash.jpg">
          <h1 class="shout">Non universalité</h1>
-         <figure>
-            <img class="cover width" src="pictures/b&w/markus-spiske-773758-unsplash.jpg">
-            <figcaption class="copyright right black">
-               <a href="https://unsplash.com/photos/QVVXPNbjLrI">Photo by Markus Spiske on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
-         <h2>Non universalité</h2>
-         <h3>Transparence et communication</h3>
-         <figure>
-            <img class="cover width" src="pictures/b&w/startae-team-704141-unsplash.jpg">
-            <figcaption class="copyright right black">
-               <a href="https://unsplash.com/photos/7tXA8xwe4W4">Photo by Startaê Team on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
-         <h2>Non universalité</h2>
-         <h3>Support à l'innovation</h3>
-         <figure>
-            <img class="cover width" src="pictures/b&w/diz-play-31367-unsplash.jpg">
-            <figcaption class="copyright right black">
-               <a href="https://unsplash.com/photos/PIrOQrqewLE">Photo by Diz Play on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
-         <h1>Agile != A.G.I.L.E</h1>
-         <figure>
-            <img class="cover width" src="pictures/b&w/rawpixel-552396-unsplash.jpg">
-            <figcaption class="copyright right black">
-               <a href="https://unsplash.com/photos/UnPhQSAVbdk">Photo by rawpixel on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
-         <h1 class="place bottom">Industrie vs. artisanat</h1>
-         <figure>
-            <img class="cover width" src="pictures/b&w/peter-miranda-22681-unsplash.jpg">
-            <figcaption class="copyright right black">
-               <a href="https://unsplash.com/photos/m6f-Anqil9k">Photo by Peter Miranda on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
+				 <figcaption class="copyright right black">
+						<a href="https://unsplash.com/photos/QVVXPNbjLrI">Photo by Markus Spiske on Unsplash</a>
+				 </figcaption>
+				 <aside class="notes">
+Même si l'agilité est désormais quelque chose de très populaire, sachez que ce n'est pas quelque chose d'universel.
+			 </aside>
+				</section>
+
+				<section data-background="pictures/b&w/startae-team-704141-unsplash.jpg">
+          <h2>Transparence et communication</h2>
+					<figcaption class="copyright right black">
+						 <a href="https://unsplash.com/photos/7tXA8xwe4W4">Photo by Startaê Team on Unsplash</a>
+					</figcaption>
+					<aside class="notes">
+						L'agilité implique une transparence et une surexposition du travail au quotidien.<br/>
+						Cela implique de travailler en équipe, de communiquer en permanence, d'accepter la revue de son code par une autre personne,
+						d'accepter de revenir sur des choses déjà faites, de remettre en question sa manière de travailler...<br/>
+						Tout le monde n'est pas forcément à l'aise avec ces pratiques.<br/>
+						Que faire des personnes qui n'arrivent pas à travailler dans ces conditions ?<br/>
+						Faut-il les pousser à rentrer dans le moule, les mettre en permanence en dehors de leur zone de confort ?<br/>
+						Faut-il les exclure des équipes ?
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/diz-play-31367-unsplash.jpg">
+          <h2>Support à l'innovation</h2>
+					<figcaption class="copyright right black">
+						 <a href="https://unsplash.com/photos/PIrOQrqewLE">Photo by Diz Play on Unsplash</a>
+					</figcaption>
+					<aside class="notes">
+						Même si ces méthodes sont à la mode, elles ne sont pas forcément bonnes pour tous et dans tous les contextes.<br/>
+						A l'origine, l'agilité était mise en place comme support à l'innovation. Ce n'est pas très étonnant que ce soient les startups qui aient
+						commencé à l'utiliser de manière intensive. Leurs besoins de tester le produit le plus vite possible, de corrections, de changement de cap étaient essentiels à leur survie.<br/>
+						Ce qu'on constate aujourd'hui, c'est que les avantages de l'agilité ne sont plus mis en oeuvre à bon escient.<br/>
+						On ne prend plus le temps nécessaire à la réflexion pour innover. Ce qui a été perçu de l'agilité, c'est le time to market.<br/>
+						On va réduire les coûts et les durées de développement. On est dans l'urgence permanente de livrer des nouvelles fonctionnalités.<br/>
+						Vous devez entendre souvent des développeurs demander à "souffler" un peu ? Pas étonnant.<br/>
+						Cette course permanente pour vider le backlog peut être épuisante à terme, et ce n'est absolument pas ce qui est préconisé par l'agilité.
+
+				</aside>
+				</section>
+
+				<section data-background="pictures/b&w/rawpixel-552396-unsplash.jpg">
+         <h1 class="shout">Agile != A.G.I.L.E</h1>
+				 <figcaption class="copyright right black">
+						<a href="https://unsplash.com/photos/UnPhQSAVbdk">Photo by rawpixel on Unsplash</a>
+				 </figcaption>
+				 <aside class="notes">
+					 Vous pouvez tout à fait être agiles dans votre travail quotidien, sans pour autant être estampillés ou certifiés A.G.I.L.E.<br/>
+					 L'agilité, c'est un état d'esprit, des valeurs, une envie de travail bien fait et utile à l'utilisateur final.<br/>
+					 Pas la peine de chercher un nouveau nom pour rebaptiser la volonté de faire du travail de qualité, dans un environnement bienveillant pour produire des logiciels utiles aux utilisateurs. Soyez juste agiles :-)
+			 </aside>
+				</section>
+
+				<section data-background="pictures/b&w/peter-miranda-22681-unsplash.jpg">
+         <h1 class="shout" style="padding-top: 85%">Industrie vs. artisanat</h1>
+				 <figcaption class="copyright right white">
+						<a href="https://unsplash.com/photos/m6f-Anqil9k">Photo by Peter Miranda on Unsplash</a>
+				 </figcaption>
+				 <aside class="notes">
+					 Tout n'est pas perdu ! Nous avons le pouvoir de changer les choses :-)<br/>
+					 Vous êtes les créateurs de valeur de l'entreprise, vous êtes les artisans qui façonnent les produits ! Ne laissez pas les managers vous dicter les outils à utiliser pour bien faire votre travail !<br/>
+					 Lorsqu'un artisan intervient chez vous, est-ce que vous lui imposez quels outils il doit utiliser ? Si il vient accompagné d'un apprenti, est-ce que vous lui refusez sa présence (parce que bon, il va le ralentir et y'a pas besoin de deux personnes pour faire ce boulot quand même).<br/>
+					 Pourquoi est ce qu'on n'accepte pas ce genre de comportement dans nos métiers ? Pourquoi le binômage est-il tant décrié par les managers ? Pourquoi est ce que les développeurs expérimentés sont considérés comme des personnes immatures qui n'ont pas réussi à évoluer en chef de projet, des éternels ados ? Pourquoi une telle infantilisation ?<br/>
+
+					 Vous êtes responsables de vos outils et de vos méthodes de travail. L'agilité, c'est dans l'équipe de développement qu'elle née, pas suite à des décisions de managers et de directeurs.<br/>
+					 Vous allez devoir maintenir demain le code que vous produisez aujourd'hui. Alors pourquoi vous mettre des bâtons dans les roues tous seuls ? Pourquoi ne pas mettre la priorité sur la qualité, le partage des connaissances au sein de l'équipe, la facilité de relecture du code, la compréhension du métier, ... ?<br/>
+					 En acceptant de faire du code de mauvaise qualité, dans des conditions "agiles", c'est la santé de votre projet, de l'équipe que vous mettez en péril. Et vous risquez de mettre la votre en péril également (nous en avons fait l'amère expérience, mais c'est un autre sujet ^^ )<br/>
+					 Commencez petit, testez des choses, voyez si ça vous convient, itérez, progressez, ... N'ayez pas peur de tenter de nouvelles approches. Au pire, vous risquez d'apprendre quelque chose ;-)<br/>
+					 Si vous êtes ici, c'est que vous avez à coeur de vous améliorer, d'apprendre de nouvelles choses, ... Et si ces pratiques de développement vous font peur, vous pouvez également les tester dans un environnement "safe", au cours de coding dojo par exemple.<br/><br/>
+					 <Moment pub>Et n'hésitez pas à venir discuter avec d'autres développeurs dans les meetups Software Crafters</Moment Pub>.<br/>
+					 L'agilité, ce n'est pas appliquer à la lettre toutes les pratiques et les cérémonies de tel ou tel framework. L'agilité s'appelle ainsi car son but est de s'adapter aux équipes, d'évoluer au fil du temps.
+		 </aside>
+				</section>
+
+				<section data-background="pictures/b&w/diana-vargas-715578-unsplash.jpg">
          <h2>Soyez pragmatiques, pas dogmatiques !</h2>
-         <figure>
-            <img class="cover width" src="pictures/b&w/diana-vargas-715578-unsplash.jpg">
-            <figcaption class="copyright right black">
-               <a href="https://unsplash.com/photos/ZySVEbGBNxA">Photo by Diana Vargas on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
-         <h2>Inventez votre propre méthode !</h2>
-         <figure>
-            <img class="cover width" src="pictures/b&w/jon-flobrant-2844-unsplash.jpg">
-            <figcaption class="copyright right black">
-               <a href="https://unsplash.com/photos/8u9Uiz_JjnM">Photo by Jon Flobrant on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
+				 <figcaption class="copyright right white">
+						<a href="https://unsplash.com/photos/ZySVEbGBNxA">Photo by Diana Vargas on Unsplash</a>
+				 </figcaption>
 
+				 <aside class="notes">
+					 Vous avez le droit de picorer les bonnes pratiques qui vous sont utiles dans votre contexte. <br/>
+					 Mais ayez conscience que vous être en phase de transformation et d'amélioration continue.<br/>
+L'agilité n'est pas un but à atteindre, mais juste une façon de marcher dans la direction dans laquelle l'équipe souhaite aller.<br/>
+L'agilité, ce ne sont pas des tampons de certifications à collectionner comme des cartes Panini.<br/>
+L'agilité n'est pas non plus un buzzword à ajouter à vos descriptions d'offres d'emploi, à côté du babyfoot et des pizzas. <br/>
+C'est un réel état d'esprit d'entreprise et des valeurs qui impliquent pas mal de choses en contrepartie.<br/>
+Et vous savez quoi ? Il n'y a pas que les développeurs qui commencent à rejeter cette chimère qu'est devenue l'agilité. <br/>
+Beaucoup d'agilistes, de coachs, ne se reconnaissent plus dans les messages qui sont désormais passés. Certains n'osent d'ailleurs même plus parler d'agilité...
 
+		 </aside>
+				</section>
 
-      <section class="slide">
+				<section data-background="pictures/b&w/jon-flobrant-2844-unsplash.jpg">
+ 					<h2 style="padding-bottom: 45%">Inventez votre propre méthode !</h2>
+					<figcaption class="copyright right black">
+						 <a href="https://unsplash.com/photos/8u9Uiz_JjnM">Photo by Jon Flobrant on Unsplash</a>
+					</figcaption>
+					<aside class="notes">
+						Mais nous avons une bonne nouvelle ! Votre équipe n'est peut-être pas agile, mais si son mode de fonctionnement lui convient,<br/>
+						si elle résout les problèmes qui la concernent et s'améliore au fil du temps, si ses membres se sentent bien, c'est une équipe avec laquelle il fait bon travailler !
+
+			</aside>
+				</section>
+
+				<section data-background="pictures/b&w/art-card-close-up-920938.jpg">
          <h2>Merci !</h2>
-         <figure>
-            <img class="cover width" src="pictures/b&w/art-card-close-up-920938.jpg">
-            <figcaption class="copyright right black">
-               <a href="https://www.pexels.com/photo/white-page-of-graphing-paper-with-red-heart-drawing-920938/">Photo by Bich Tran from Pexels</a>
-            </figcaption>
-         </figure>
-      </section>
+				 <figcaption class="copyright right black">
+						<a href="https://www.pexels.com/photo/white-page-of-graphing-paper-with-red-heart-drawing-920938/">Photo by Bich Tran from Pexels</a>
+				 </figcaption>
+				</section>
 
-      <section class="slide">
-         <h1>Merci !</h1>
-         <h3>Et un grand merci à :</h3>
-         <ul>
-            <li>Tous les dev qui ont répondu à nos questions</li>
-            <li>Dorothée, Pierrick et Grégoire d'Agile Garden pour nos riches échanges</li>
-            <li>Aurélie de Conserto pour notre discussion très instructive</li>
-            <li>Les amis d'AOF</li>
-         </ul>
-         <figure>
-            <img class="cover" src="pictures/b&w/eric-ward-342202-unsplash.jpg">
-            <figcaption class="copyright right white">
-               <a href="https://unsplash.com/photos/P6NhhvGIL9k">Photo by Eric Ward on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <section class="slide">
+				<section data-background="pictures/b&w/eric-ward-342202-unsplash.jpg">
+					<h1>Merci !</h1>
+					<h3>Et un grand merci à :</h3>
+					<ul>
+						 <li>Tous les dev qui ont répondu à nos questions</li>
+						 <li>Dorothée, Pierrick et Grégoire d'Agile Garden pour nos riches échanges</li>
+						 <li>Aurélie de Conserto pour notre discussion très instructive</li>
+						 <li>Les amis d'AOF</li>
+					</ul>
+					<figcaption class="copyright right black">
+						 <a href="https://unsplash.com/photos/P6NhhvGIL9k">Photo by Eric Ward on Unsplash</a>
+					</figcaption>
+				</section>
+
+				<section data-background="pictures/b&w/camylla-battani-784361-unsplash.jpg">
          <h1 class="shout">Questions ?</h1>
-         <figure>
-            <img class="cover width" src="pictures/b&w/camylla-battani-784361-unsplash.jpg">
-            <figcaption class="copyright right black">
-               <a href="https://unsplash.com/photos/AoqgGAqrLpU">Photo by Camylla Battani on Unsplash</a>
-            </figcaption>
-         </figure>
-      </section>
-      <div class="progress"></div>
-      <script src="node_modules/shower-core/shower.min.js"></script>
-   </body>
+				 <figcaption class="copyright right black">
+						<a href="https://unsplash.com/photos/AoqgGAqrLpU">Photo by Camylla Battani on Unsplash</a>
+				 </figcaption>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				controls: false,
+				history: true,
+				transition: 'none',
+				center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
 </html>
