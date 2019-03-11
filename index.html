@@ -98,7 +98,7 @@ On peut donc se demander pourquoi une telle scission ?
 							 <a href="https://unsplash.com/photos/i-ePv9Dxg7U">Photo by Anthony Tran on Unsplash</a>
 						</figcaption>
 					<aside class="notes">
-						1/Un certain nombre de développeurs ont vécu l'agilité sur leur projet comme un traumatisme.
+						Un certain nombre de développeurs ont vécu l'agilité sur leur projet comme un traumatisme.
 <br/>
 						Ils ne veulent surtout plus jamais travailler dans de telles conditions.
 <br/>
@@ -112,7 +112,7 @@ On peut donc se demander pourquoi une telle scission ?
 						 <a href="http://programming-motherfucker.com/">© Zed A. Shaw</a>
 					</figcaption>
 					<aside class="notes">
-2/On peut également observer de tels mouvements de développeurs, qui peuvent être mal accueillis car ils renforcent les stéréotypes des dev pas intéressés par autre chose que le code.
+On peut également observer de tels mouvements de développeurs, qui peuvent être mal accueillis car ils renforcent les stéréotypes des dev pas intéressés par autre chose que le code.
 				</aside>
 				</section>
 
@@ -121,7 +121,7 @@ On peut donc se demander pourquoi une telle scission ?
 						 <a href="http://programming-motherfucker.com/">© Zed A. Shaw</a>
 					</figcaption>
 					<aside class="notes">
-2/Mais quand on regarde un peu plus, on commence à avoir quelques pistes d'explication...
+Mais quand on regarde un peu plus, on commence à avoir quelques pistes d'explication...
 				</aside>
 				</section>
 
@@ -196,7 +196,6 @@ On peut donc se demander pourquoi une telle scission ?
 						</figcaption>
 						<aside class="notes">
 						    Première constatation, l'agilité a été pervertie au fil du temps.<br/>
-                Panopticon
 					</aside>
 				</section>
 
@@ -336,7 +335,8 @@ Encore une fois, le constat est assez accablant.
 						Et pour faire plaisir aux développeurs, on va ajouter un peu d'estimations collectives, ils auront l'impression d'avoir leur mot à dire comme ça.
 						Par contre, le rythme soutenable, c'est bien joli votre idée de bisounours, mais on a un business à faire tourner quand même ! "
 <br/>
-						La base de l'agilité repose sur une bonne conception, un code évolutif et simple. Les auteurs du manifeste n'ont peut-être pas assez insisté sur ce point ou ça leur paraissait tellement évident qu'ils ne l'ont pas rendu suffisamment explicite.
+La base de l'agilité repose sur une bonne conception, un code évolutif et simple. Les auteurs du manifeste n'ont peut-être pas assez insisté sur ce point ou ça leur paraissait tellement évident qu'ils ne l'ont pas rendu suffisamment explicite.<br/>
+Gros stress sur le code, necessite du recul et de l'expertise
 				</aside>
 				</section>
 
@@ -352,7 +352,7 @@ Encore une fois, le constat est assez accablant.
 	Deux ? Trois ? Toutes ?
 	En passant, vous constaterez que les deux points centraux sont les tests et le binômage, pratiques les plus considérées comme de la "perte de temps".<br/>
 	C'est de la perte de temps, et en plus, on ne voit pas ce que ça apporte dans les indicateurs du projet
-
+<br/> binomge, temps de cerveau vs temps de doigts
 				</aside>
 				</section>
 
@@ -363,7 +363,8 @@ Encore une fois, le constat est assez accablant.
 					</figcaption>
 					<aside class="notes">
 						La popularisation de scrum, et de sa liste d'indicateurs comme les burndown, burnup, le management visuel associé aux méthodes agiles ont permis aux managers de renforcer leur gestion par les indicateurs<br/>
-						 ("Wahou ! Top bien ! Plein de nouveaux KPIs pour tracker le travail des autres !")
+						  ("Wahou ! Top bien ! Plein de nouveaux KPIs pour tracker le travail des autres !") <br/>
+Panopticon, illusion de la liberte vs controle pernicieux
 
 				</aside>
 				</section>
@@ -743,6 +744,12 @@ Beaucoup d'agilistes, de coachs, ne se reconnaissent plus dans les messages qui 
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+     Reveal.configure({
+        keyboard: {
+            38: 'next', // go to the next slide when the ENTER key is pressed
+            40: 'prev' // do something custom when ESC is pressed
+        }
+    });
 		</script>
 	</body>
 </html>
