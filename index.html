@@ -15,12 +15,14 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- Printing and PDF exports -->
 		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+		var link = document.createElement("link");
+link.rel = "stylesheet";
+link.type = "text/css";
+link.href = window.location.search.match(/print-pdf/gi)
+  ? "css/print/pdf.css"
+  : "css/print/paper.css";
+document.getElementsByTagName("head")[0].appendChild(link);
+</script>
 	</head>
 	<body>
 		<div class="reveal">
@@ -373,6 +375,7 @@ Panopticon, illusion de la liberte vs controle pernicieux
 						Les indicateurs biaisent la relation au travail. Les outils supposés apporter de la transparence se retournent contre leurs auteurs.<br/>
 						"Pourquoi est-ce que le burndown n'avance pas ?", "Pourquoi est ce que tu n'as pas diminué ton reste à faire ?", "Machin a fait plus de tâches que toi lors du dernier sprint. Tu n'es pas vraiment impliqué dans ton travail..."
 						On observe des dérives assez malsaines :
+						ALTERNER LES ANECDOTES
 						<ul>
 							<li> par exemple, les développeurs ne vont prendre que les petites tâches pour montrer qu'ils avancent vite. Et les tâches complexes qui prennent du temps ne sont jamais faites.</li>
 					 	  <li> certains scrum masters sont objectivés sur le burndown. Il faut donc à tout prix qu'il soit le plus rectiligne possible, quitte à tricher</li>
@@ -554,7 +557,7 @@ On va pouvoir ne pas faire de specs ni vraiment définir notre besoin. Ça doit 
 				</section>
 
 				<section data-background="pictures/b&w/braydon-anderson-105552-unsplash.jpg">
-          <h2 >Energizers ... WTF ?</h2>
+          <h2 >Energizers, Ice-breakers ... WTF ?</h2>
 					<figcaption class="copyright right white">
 						 <a href="https://unsplash.com/photos/wOHH-NUTvVc">Photo by Braydon Anderson on Unsplash</a>
 					</figcaption>
@@ -710,27 +713,33 @@ Beaucoup d'agilistes, de coachs, ne se reconnaissent plus dans les messages qui 
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				controls: false,
-				history: true,
-				transition: 'none',
-				center: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-     Reveal.configure({
-        keyboard: {
-            38: 'next', // go to the next slide when the ENTER key is pressed
-            40: 'prev' // do something custom when ESC is pressed
-        }
-    });
-		</script>
+		// More info about config & dependencies:
+// - https://github.com/hakimel/reveal.js#configuration
+// - https://github.com/hakimel/reveal.js#dependencies
+Reveal.initialize({
+  controls: false,
+  history: true,
+  transition: "none",
+  center: true,
+  dependencies: [
+    { src: "plugin/markdown/marked.js" },
+    { src: "plugin/markdown/markdown.js" },
+    { src: "plugin/notes/notes.js", async: true },
+    {
+      src: "plugin/highlight/highlight.js",
+      async: true,
+      callback: function() {
+        hljs.initHighlightingOnLoad();
+      }
+    }
+  ]
+});
+Reveal.configure({
+  keyboard: {
+    38: "next", // go to the next slide when the ENTER key is pressed
+    40: "prev" // do something custom when ESC is pressed
+  }
+});
+</script>
 	</body>
 </html>
